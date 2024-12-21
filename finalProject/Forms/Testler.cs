@@ -16,5 +16,14 @@ namespace finalProject.Forms
         {
             InitializeComponent();
         }
+
+        private void btnChoiseTopics_Click(object sender, EventArgs e)
+        {
+            if (pnlTopics.Visible)
+            {
+                pnlTopics.Visible = false;
+            }
+            else { pnlTopics.Visible = true; }
+        }
     }
 }

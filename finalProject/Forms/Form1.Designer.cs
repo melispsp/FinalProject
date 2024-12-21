@@ -69,13 +69,14 @@
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.Size = new Size(220, 700);
+            panelMenu.Size = new Size(220, 799);
             panelMenu.TabIndex = 0;
             // 
             // btnSimulations
             // 
             btnSimulations.Dock = DockStyle.Top;
             btnSimulations.FlatAppearance.BorderSize = 0;
+            btnSimulations.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             btnSimulations.FlatStyle = FlatStyle.Flat;
             btnSimulations.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             btnSimulations.ForeColor = Color.Red;
@@ -97,6 +98,7 @@
             // 
             btnTests.Dock = DockStyle.Top;
             btnTests.FlatAppearance.BorderSize = 0;
+            btnTests.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             btnTests.FlatStyle = FlatStyle.Flat;
             btnTests.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             btnTests.ForeColor = Color.LawnGreen;
@@ -118,6 +120,7 @@
             // 
             btnFlashcards.Dock = DockStyle.Top;
             btnFlashcards.FlatAppearance.BorderSize = 0;
+            btnFlashcards.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             btnFlashcards.FlatStyle = FlatStyle.Flat;
             btnFlashcards.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             btnFlashcards.ForeColor = Color.MediumSlateBlue;
@@ -139,6 +142,7 @@
             // 
             btnLessons.Dock = DockStyle.Top;
             btnLessons.FlatAppearance.BorderSize = 0;
+            btnLessons.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             btnLessons.FlatStyle = FlatStyle.Flat;
             btnLessons.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 162);
             btnLessons.ForeColor = Color.Cyan;
@@ -162,6 +166,8 @@
             btnOut.BackgroundImageLayout = ImageLayout.None;
             btnOut.Dock = DockStyle.Bottom;
             btnOut.FlatAppearance.BorderSize = 0;
+            btnOut.FlatAppearance.MouseDownBackColor = Color.FromArgb(10, 8, 15);
+            btnOut.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             btnOut.FlatStyle = FlatStyle.Flat;
             btnOut.ForeColor = Color.Silver;
             btnOut.IconChar = FontAwesome.Sharp.IconChar.SignOut;
@@ -169,7 +175,7 @@
             btnOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnOut.IconSize = 40;
             btnOut.ImageAlign = ContentAlignment.MiddleLeft;
-            btnOut.Location = new Point(0, 655);
+            btnOut.Location = new Point(0, 754);
             btnOut.Name = "btnOut";
             btnOut.Padding = new Padding(10, 0, 20, 0);
             btnOut.Size = new Size(220, 45);
@@ -220,7 +226,7 @@
             pnlTopBar.Dock = DockStyle.Top;
             pnlTopBar.Location = new Point(220, 0);
             pnlTopBar.Name = "pnlTopBar";
-            pnlTopBar.Size = new Size(780, 60);
+            pnlTopBar.Size = new Size(1227, 60);
             pnlTopBar.TabIndex = 1;
             pnlTopBar.MouseDown += pnlTopBar_MouseDown;
             // 
@@ -245,7 +251,7 @@
             btnSettings.IconColor = Color.Gainsboro;
             btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSettings.IconSize = 40;
-            btnSettings.Location = new Point(720, 0);
+            btnSettings.Location = new Point(1167, 0);
             btnSettings.Name = "btnSettings";
             btnSettings.Size = new Size(60, 60);
             btnSettings.TabIndex = 1;
@@ -277,7 +283,7 @@
             pnlShadow.Dock = DockStyle.Top;
             pnlShadow.Location = new Point(220, 60);
             pnlShadow.Name = "pnlShadow";
-            pnlShadow.Size = new Size(550, 8);
+            pnlShadow.Size = new Size(997, 8);
             pnlShadow.TabIndex = 3;
             // 
             // pnlDesktop
@@ -285,13 +291,14 @@
             pnlDesktop.Dock = DockStyle.Fill;
             pnlDesktop.Location = new Point(220, 68);
             pnlDesktop.Name = "pnlDesktop";
-            pnlDesktop.Size = new Size(550, 632);
+            pnlDesktop.Size = new Size(997, 731);
             pnlDesktop.TabIndex = 4;
             // 
             // ıconButton1
             // 
             ıconButton1.Dock = DockStyle.Top;
             ıconButton1.FlatAppearance.BorderSize = 0;
+            ıconButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             ıconButton1.FlatStyle = FlatStyle.Flat;
             ıconButton1.ForeColor = Color.Lavender;
             ıconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -310,6 +317,7 @@
             // 
             ıconButton2.Dock = DockStyle.Top;
             ıconButton2.FlatAppearance.BorderSize = 0;
+            ıconButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             ıconButton2.FlatStyle = FlatStyle.Flat;
             ıconButton2.ForeColor = Color.Lavender;
             ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -328,6 +336,7 @@
             // 
             ıconButton3.Dock = DockStyle.Top;
             ıconButton3.FlatAppearance.BorderSize = 0;
+            ıconButton3.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             ıconButton3.FlatStyle = FlatStyle.Flat;
             ıconButton3.ForeColor = Color.Lavender;
             ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -346,6 +355,7 @@
             // 
             ıconButton4.Dock = DockStyle.Top;
             ıconButton4.FlatAppearance.BorderSize = 0;
+            ıconButton4.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             ıconButton4.FlatStyle = FlatStyle.Flat;
             ıconButton4.ForeColor = Color.Lavender;
             ıconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -364,6 +374,7 @@
             // 
             ıconButton5.Dock = DockStyle.Top;
             ıconButton5.FlatAppearance.BorderSize = 0;
+            ıconButton5.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             ıconButton5.FlatStyle = FlatStyle.Flat;
             ıconButton5.ForeColor = Color.Lavender;
             ıconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
@@ -387,9 +398,9 @@
             pnlSettinsBar.Controls.Add(ıconButton2);
             pnlSettinsBar.Controls.Add(ıconButton1);
             pnlSettinsBar.Dock = DockStyle.Right;
-            pnlSettinsBar.Location = new Point(770, 60);
+            pnlSettinsBar.Location = new Point(1217, 60);
             pnlSettinsBar.Name = "pnlSettinsBar";
-            pnlSettinsBar.Size = new Size(230, 640);
+            pnlSettinsBar.Size = new Size(230, 739);
             pnlSettinsBar.TabIndex = 2;
             pnlSettinsBar.Visible = false;
             // 
@@ -399,7 +410,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 28, 55);
             BackgroundImageLayout = ImageLayout.Center;
-            ClientSize = new Size(1000, 700);
+            CancelButton = btnOut;
+            ClientSize = new Size(1447, 799);
             Controls.Add(pnlDesktop);
             Controls.Add(pnlShadow);
             Controls.Add(pnlSettinsBar);

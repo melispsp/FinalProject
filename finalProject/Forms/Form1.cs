@@ -36,9 +36,12 @@ namespace finalProject
         public MainForm()
         {
             InitializeComponent();
+
+            //active edildiktem sonra yanda çýkan küçük renkli þey
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 50);
             panelMenu.Controls.Add(leftBorderBtn);
+
             //form
             this.Text = string.Empty;
             this.ControlBox = false;
@@ -73,13 +76,14 @@ namespace finalProject
                 currentBtn.TextImageRelation = TextImageRelation.TextBeforeImage;
                 currentBtn.ImageAlign = ContentAlignment.MiddleRight;
 
+                btnHome.IconChar = currentBtn.IconChar;
+                btnHome.IconColor = color;
+
                 leftBorderBtn.BackColor = color;
                 leftBorderBtn.Location = new Point(0, currentBtn.Location.Y);
                 leftBorderBtn.Visible = true;
                 leftBorderBtn.BringToFront();
-
-                //iconCurrentChildForm.IconChar = currentBtn.IconChar;
-                //iconCurrentChildForm.IconColor = color;
+                pnlShadow.BackColor = color;
             }
         }
 
@@ -88,9 +92,11 @@ namespace finalProject
             if (currentBtn != null)
             {
                 currentBtn.BackColor = Color.FromArgb(8, 6, 15);
+                pnlShadow.BackColor = Color.FromArgb(5, 2, 10);
                 currentBtn.TextAlign = ContentAlignment.MiddleLeft;
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
+                btnHome.IconChar = IconChar.Home;
                 btnHome.IconColor = Color.Lavender;
 
             }
@@ -208,7 +214,6 @@ namespace finalProject
 
 
 
-
         // database funcs
 
         private MySqlConnection GetConnection()
@@ -243,7 +248,7 @@ namespace finalProject
             }
         }
 
-       
+
     }
 }
 

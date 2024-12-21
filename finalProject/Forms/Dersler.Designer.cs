@@ -41,13 +41,12 @@
             ıconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
             button4 = new Button();
             panel5 = new Panel();
-            ıconButton5 = new FontAwesome.Sharp.IconButton();
-            ıconButton4 = new FontAwesome.Sharp.IconButton();
-            ıconButton3 = new FontAwesome.Sharp.IconButton();
-            ıconButton2 = new FontAwesome.Sharp.IconButton();
+            btnListelerim = new FontAwesome.Sharp.IconButton();
             btnEgitimler = new FontAwesome.Sharp.IconButton();
-            flowLayoutPanel1 = new FlowLayoutPanel();
             pnlEgitimlerMenu = new Panel();
+            pnlListelerimMenu = new Panel();
+            textBox1 = new TextBox();
+            ıconButton1 = new FontAwesome.Sharp.IconButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ıconPictureBox1).BeginInit();
             panel2.SuspendLayout();
@@ -218,10 +217,9 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(20, 25, 100);
-            panel5.Controls.Add(ıconButton5);
-            panel5.Controls.Add(ıconButton4);
-            panel5.Controls.Add(ıconButton3);
-            panel5.Controls.Add(ıconButton2);
+            panel5.Controls.Add(ıconButton1);
+            panel5.Controls.Add(textBox1);
+            panel5.Controls.Add(btnListelerim);
             panel5.Controls.Add(btnEgitimler);
             panel5.Dock = DockStyle.Top;
             panel5.Location = new Point(0, 0);
@@ -229,69 +227,21 @@
             panel5.Size = new Size(762, 54);
             panel5.TabIndex = 8;
             // 
-            // ıconButton5
+            // btnListelerim
             // 
-            ıconButton5.Dock = DockStyle.Left;
-            ıconButton5.FlatAppearance.BorderSize = 0;
-            ıconButton5.FlatStyle = FlatStyle.Flat;
-            ıconButton5.ForeColor = Color.Gainsboro;
-            ıconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
-            ıconButton5.IconColor = Color.Black;
-            ıconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton5.Location = new Point(516, 0);
-            ıconButton5.Name = "ıconButton5";
-            ıconButton5.Size = new Size(129, 54);
-            ıconButton5.TabIndex = 4;
-            ıconButton5.Text = "Eğitimler ";
-            ıconButton5.UseVisualStyleBackColor = true;
-            // 
-            // ıconButton4
-            // 
-            ıconButton4.Dock = DockStyle.Left;
-            ıconButton4.FlatAppearance.BorderSize = 0;
-            ıconButton4.FlatStyle = FlatStyle.Flat;
-            ıconButton4.ForeColor = Color.Gainsboro;
-            ıconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            ıconButton4.IconColor = Color.Black;
-            ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton4.Location = new Point(387, 0);
-            ıconButton4.Name = "ıconButton4";
-            ıconButton4.Size = new Size(129, 54);
-            ıconButton4.TabIndex = 3;
-            ıconButton4.Text = "Eğitimler ";
-            ıconButton4.UseVisualStyleBackColor = true;
-            // 
-            // ıconButton3
-            // 
-            ıconButton3.Dock = DockStyle.Left;
-            ıconButton3.FlatAppearance.BorderSize = 0;
-            ıconButton3.FlatStyle = FlatStyle.Flat;
-            ıconButton3.ForeColor = Color.Gainsboro;
-            ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            ıconButton3.IconColor = Color.Black;
-            ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton3.Location = new Point(258, 0);
-            ıconButton3.Name = "ıconButton3";
-            ıconButton3.Size = new Size(129, 54);
-            ıconButton3.TabIndex = 2;
-            ıconButton3.Text = "Eğitimler ";
-            ıconButton3.UseVisualStyleBackColor = true;
-            // 
-            // ıconButton2
-            // 
-            ıconButton2.Dock = DockStyle.Left;
-            ıconButton2.FlatAppearance.BorderSize = 0;
-            ıconButton2.FlatStyle = FlatStyle.Flat;
-            ıconButton2.ForeColor = Color.Gainsboro;
-            ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            ıconButton2.IconColor = Color.Black;
-            ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton2.Location = new Point(129, 0);
-            ıconButton2.Name = "ıconButton2";
-            ıconButton2.Size = new Size(129, 54);
-            ıconButton2.TabIndex = 1;
-            ıconButton2.Text = "Eğitimler ";
-            ıconButton2.UseVisualStyleBackColor = true;
+            btnListelerim.Dock = DockStyle.Left;
+            btnListelerim.FlatAppearance.BorderSize = 0;
+            btnListelerim.FlatStyle = FlatStyle.Flat;
+            btnListelerim.ForeColor = Color.Gainsboro;
+            btnListelerim.IconChar = FontAwesome.Sharp.IconChar.None;
+            btnListelerim.IconColor = Color.Black;
+            btnListelerim.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnListelerim.Location = new Point(155, 0);
+            btnListelerim.Name = "btnListelerim";
+            btnListelerim.Size = new Size(155, 54);
+            btnListelerim.TabIndex = 1;
+            btnListelerim.Text = "Listelerim";
+            btnListelerim.UseVisualStyleBackColor = true;
             // 
             // btnEgitimler
             // 
@@ -304,29 +254,54 @@
             btnEgitimler.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnEgitimler.Location = new Point(0, 0);
             btnEgitimler.Name = "btnEgitimler";
-            btnEgitimler.Size = new Size(129, 54);
+            btnEgitimler.Size = new Size(155, 54);
             btnEgitimler.TabIndex = 0;
             btnEgitimler.Text = "Eğitimler ";
             btnEgitimler.UseVisualStyleBackColor = true;
-            btnEgitimler.Click += ıconButton1_Click;
-            // 
-            // flowLayoutPanel1
-            // 
-            flowLayoutPanel1.BackColor = Color.FromArgb(0, 0, 10);
-            flowLayoutPanel1.Dock = DockStyle.Top;
-            flowLayoutPanel1.Location = new Point(0, 54);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(762, 8);
-            flowLayoutPanel1.TabIndex = 9;
             // 
             // pnlEgitimlerMenu
             // 
             pnlEgitimlerMenu.BackColor = Color.FromArgb(0, 0, 10);
-            pnlEgitimlerMenu.Location = new Point(5, 59);
+            pnlEgitimlerMenu.Location = new Point(2, 59);
             pnlEgitimlerMenu.Name = "pnlEgitimlerMenu";
-            pnlEgitimlerMenu.Size = new Size(168, 162);
+            pnlEgitimlerMenu.Size = new Size(168, 168);
             pnlEgitimlerMenu.TabIndex = 10;
             pnlEgitimlerMenu.Visible = false;
+            // 
+            // pnlListelerimMenu
+            // 
+            pnlListelerimMenu.BackColor = Color.FromArgb(0, 0, 10);
+            pnlListelerimMenu.Location = new Point(161, 59);
+            pnlListelerimMenu.Name = "pnlListelerimMenu";
+            pnlListelerimMenu.Size = new Size(168, 168);
+            pnlListelerimMenu.TabIndex = 12;
+            pnlListelerimMenu.Visible = false;
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.FromArgb(20, 25, 100);
+            textBox1.BorderStyle = BorderStyle.FixedSingle;
+            textBox1.ForeColor = Color.Gainsboro;
+            textBox1.Location = new Point(589, 17);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(166, 27);
+            textBox1.TabIndex = 2;
+            textBox1.Text = "  Ara...";
+            // 
+            // ıconButton1
+            // 
+            ıconButton1.FlatAppearance.BorderSize = 0;
+            ıconButton1.FlatStyle = FlatStyle.Flat;
+            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            ıconButton1.IconColor = Color.Gainsboro;
+            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton1.IconSize = 27;
+            ıconButton1.Location = new Point(725, 18);
+            ıconButton1.Name = "ıconButton1";
+            ıconButton1.Size = new Size(25, 25);
+            ıconButton1.TabIndex = 3;
+            ıconButton1.Text = "ıconButton1";
+            ıconButton1.UseVisualStyleBackColor = true;
             // 
             // Dersler
             // 
@@ -334,8 +309,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 28, 55);
             ClientSize = new Size(762, 585);
+            Controls.Add(pnlListelerimMenu);
             Controls.Add(pnlEgitimlerMenu);
-            Controls.Add(flowLayoutPanel1);
             Controls.Add(panel5);
             Controls.Add(panel4);
             Controls.Add(panel3);
@@ -344,7 +319,6 @@
             Name = "Dersler";
             ShowIcon = false;
             Text = "Dersler";
-            Load += Dersler_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)ıconPictureBox1).EndInit();
             panel2.ResumeLayout(false);
@@ -354,6 +328,7 @@
             panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)ıconPictureBox4).EndInit();
             panel5.ResumeLayout(false);
+            panel5.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -365,7 +340,6 @@
         private Panel panel4;
         private Panel panel5;
         private Button button1;
-        private FlowLayoutPanel flowLayoutPanel1;
         private Button button2;
         private Button button3;
         private Button button4;
@@ -374,10 +348,10 @@
         private FontAwesome.Sharp.IconPictureBox ıconPictureBox3;
         private FontAwesome.Sharp.IconPictureBox ıconPictureBox4;
         private FontAwesome.Sharp.IconButton btnEgitimler;
-        private FontAwesome.Sharp.IconButton ıconButton5;
-        private FontAwesome.Sharp.IconButton ıconButton4;
-        private FontAwesome.Sharp.IconButton ıconButton3;
-        private FontAwesome.Sharp.IconButton ıconButton2;
+        private FontAwesome.Sharp.IconButton btnListelerim;
         private Panel pnlEgitimlerMenu;
+        private Panel pnlListelerimMenu;
+        private TextBox textBox1;
+        private FontAwesome.Sharp.IconButton ıconButton1;
     }
 }
