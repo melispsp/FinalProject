@@ -17,20 +17,18 @@ namespace finalProject.Forms
             InitializeComponent();
         }
 
-
-        private void Dersler_Load(object sender, EventArgs e)
+        private void Buton_MouseHover(object sender, EventArgs e)
         {
-
+            Button buton = (Button)sender;
+            buton.BackColor = Color.LightBlue;
         }
 
-        private void ıconButton1_Click(object sender, EventArgs e)
+        private void Buton_MouseLeave(object sender, EventArgs e)
         {
-            if (pnlEgitimlerMenu.Visible == true)
-            {
-                pnlEgitimlerMenu.Visible = false;
-            }
-            else { pnlEgitimlerMenu.Visible = true; }
+            Button buton = (Button)sender;
+            buton.BackColor = SystemColors.Control;
+                }
 
-        }
+
     }
 }
