@@ -42,7 +42,7 @@
             // 
             // pnlTestler
             // 
-            pnlTestler.BackColor = Color.FromArgb(0, 55, 10);
+            pnlTestler.BackColor = Color.FromArgb(0, 60, 15);
             pnlTestler.Controls.Add(btnChoiseTopics);
             pnlTestler.Dock = DockStyle.Top;
             pnlTestler.Location = new Point(0, 0);

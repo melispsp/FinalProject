@@ -38,18 +38,6 @@
             btnCard6 = new Button();
             btnCard7 = new Button();
             btnCard8 = new Button();
-
-            // Butonlarılisteye ekleyin
-            cards.Add(new Card("Front 1", "Back 1", btnCard1));
-            cards.Add(new Card("Front 2", "Back 2", btnCard2));
-            cards.Add(new Card("Front 3", "Back 3", btnCard3));
-            cards.Add(new Card("Front 4", "Back 4", btnCard4));
-            cards.Add(new Card("Front 5", "Back 5", btnCard5));
-            cards.Add(new Card("Front 6", "Back 6", btnCard6));
-            cards.Add(new Card("Front 7", "Back 7", btnCard7));
-            cards.Add(new Card("Front 8", "Back 8", btnCard8));
-
-
             pnlflashcard = new Panel();
             panel2 = new Panel();
             lblHosGeldiniz = new Label();
@@ -68,8 +56,8 @@
             // btnCard1
             // 
             btnCard1.BackColor = Color.BlueViolet;
-            btnCard1.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard1.FlatAppearance.BorderSize = 3;
+            btnCard1.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard1.FlatAppearance.BorderSize = 4;
             btnCard1.FlatStyle = FlatStyle.Flat;
             btnCard1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard1.ForeColor = Color.WhiteSmoke;
@@ -83,8 +71,8 @@
             // btnCard2
             // 
             btnCard2.BackColor = Color.BlueViolet;
-            btnCard2.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard2.FlatAppearance.BorderSize = 3;
+            btnCard2.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard2.FlatAppearance.BorderSize = 4;
             btnCard2.FlatStyle = FlatStyle.Flat;
             btnCard2.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard2.ForeColor = Color.WhiteSmoke;
@@ -98,8 +86,8 @@
             // btnCard3
             // 
             btnCard3.BackColor = Color.BlueViolet;
-            btnCard3.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard3.FlatAppearance.BorderSize = 3;
+            btnCard3.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard3.FlatAppearance.BorderSize = 4;
             btnCard3.FlatStyle = FlatStyle.Flat;
             btnCard3.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard3.ForeColor = Color.WhiteSmoke;
@@ -113,8 +101,8 @@
             // btnCard4
             // 
             btnCard4.BackColor = Color.BlueViolet;
-            btnCard4.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard4.FlatAppearance.BorderSize = 3;
+            btnCard4.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard4.FlatAppearance.BorderSize = 4;
             btnCard4.FlatStyle = FlatStyle.Flat;
             btnCard4.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard4.ForeColor = Color.WhiteSmoke;
@@ -128,8 +116,8 @@
             // btnCard5
             // 
             btnCard5.BackColor = Color.BlueViolet;
-            btnCard5.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard5.FlatAppearance.BorderSize = 3;
+            btnCard5.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard5.FlatAppearance.BorderSize = 4;
             btnCard5.FlatStyle = FlatStyle.Flat;
             btnCard5.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard5.ForeColor = Color.WhiteSmoke;
@@ -143,8 +131,8 @@
             // btnCard6
             // 
             btnCard6.BackColor = Color.BlueViolet;
-            btnCard6.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard6.FlatAppearance.BorderSize = 3;
+            btnCard6.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard6.FlatAppearance.BorderSize = 4;
             btnCard6.FlatStyle = FlatStyle.Flat;
             btnCard6.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard6.ForeColor = Color.WhiteSmoke;
@@ -158,8 +146,8 @@
             // btnCard7
             // 
             btnCard7.BackColor = Color.BlueViolet;
-            btnCard7.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard7.FlatAppearance.BorderSize = 3;
+            btnCard7.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard7.FlatAppearance.BorderSize = 4;
             btnCard7.FlatStyle = FlatStyle.Flat;
             btnCard7.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard7.ForeColor = Color.WhiteSmoke;
@@ -173,8 +161,8 @@
             // btnCard8
             // 
             btnCard8.BackColor = Color.BlueViolet;
-            btnCard8.FlatAppearance.BorderColor = Color.MediumSlateBlue;
-            btnCard8.FlatAppearance.BorderSize = 3;
+            btnCard8.FlatAppearance.BorderColor = Color.DarkSlateBlue;
+            btnCard8.FlatAppearance.BorderSize = 4;
             btnCard8.FlatStyle = FlatStyle.Flat;
             btnCard8.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCard8.ForeColor = Color.WhiteSmoke;
@@ -207,12 +195,13 @@
             // lblHosGeldiniz
             // 
             lblHosGeldiniz.Dock = DockStyle.Bottom;
+            lblHosGeldiniz.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 162);
             lblHosGeldiniz.ForeColor = Color.Gainsboro;
             lblHosGeldiniz.Location = new Point(0, 11);
             lblHosGeldiniz.Name = "lblHosGeldiniz";
             lblHosGeldiniz.Size = new Size(1209, 34);
             lblHosGeldiniz.TabIndex = 0;
-            lblHosGeldiniz.Text = "   Hoş Geldiniz!  Kartların ön yüzünde eğitimlerde gördüğünüz bazı kavramlar bulunmakta. Arka yüzünde ise açıklamaları. Daha hızlı öğrenmek için çevirmeye başlayın!";
+            lblHosGeldiniz.Text = "   Hoş Geldiniz!  Kartların ön yüzünde eğitimlerde gördüğünüz bazı kavramlar, arka yüzlerinde ise açıklamaları bulunmakta. Daha hızlı öğrenmek için çevirmeye başlayın!";
             // 
             // panel1
             // 
