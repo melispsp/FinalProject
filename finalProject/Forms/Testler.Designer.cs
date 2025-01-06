@@ -30,23 +30,24 @@
         {
             pnlTestler = new Panel();
             btnChoiseTopics = new FontAwesome.Sharp.IconButton();
-            pnlTopics = new Panel();
+            pnlKonuMenu = new Panel();
             bntopsosyalMuhendislik = new Button();
             btnzararliYazilimlar = new Button();
             btnTopAgBilgisi = new Button();
             btnTopSiberGuvenligeGiris = new Button();
+            pnlTest = new Panel();
             pnlTestler.SuspendLayout();
-            pnlTopics.SuspendLayout();
+            pnlKonuMenu.SuspendLayout();
             SuspendLayout();
             // 
             // pnlTestler
             // 
-            pnlTestler.BackColor = Color.FromArgb(0, 50, 10);
+            pnlTestler.BackColor = Color.FromArgb(0, 55, 10);
             pnlTestler.Controls.Add(btnChoiseTopics);
             pnlTestler.Dock = DockStyle.Top;
             pnlTestler.Location = new Point(0, 0);
             pnlTestler.Name = "pnlTestler";
-            pnlTestler.Size = new Size(1234, 54);
+            pnlTestler.Size = new Size(1209, 54);
             pnlTestler.TabIndex = 0;
             // 
             // btnChoiseTopics
@@ -71,19 +72,19 @@
             btnChoiseTopics.UseVisualStyleBackColor = true;
             btnChoiseTopics.Click += btnChoiseTopics_Click;
             // 
-            // pnlTopics
+            // pnlKonuMenu
             // 
-            pnlTopics.AutoSize = true;
-            pnlTopics.BackColor = Color.FromArgb(0, 45, 0);
-            pnlTopics.Controls.Add(bntopsosyalMuhendislik);
-            pnlTopics.Controls.Add(btnzararliYazilimlar);
-            pnlTopics.Controls.Add(btnTopAgBilgisi);
-            pnlTopics.Controls.Add(btnTopSiberGuvenligeGiris);
-            pnlTopics.Location = new Point(2, 54);
-            pnlTopics.Name = "pnlTopics";
-            pnlTopics.Size = new Size(170, 200);
-            pnlTopics.TabIndex = 1;
-            pnlTopics.Visible = false;
+            pnlKonuMenu.AutoSize = true;
+            pnlKonuMenu.BackColor = Color.FromArgb(0, 45, 0);
+            pnlKonuMenu.Controls.Add(bntopsosyalMuhendislik);
+            pnlKonuMenu.Controls.Add(btnzararliYazilimlar);
+            pnlKonuMenu.Controls.Add(btnTopAgBilgisi);
+            pnlKonuMenu.Controls.Add(btnTopSiberGuvenligeGiris);
+            pnlKonuMenu.Location = new Point(2, 54);
+            pnlKonuMenu.Name = "pnlKonuMenu";
+            pnlKonuMenu.Size = new Size(170, 200);
+            pnlKonuMenu.TabIndex = 1;
+            pnlKonuMenu.Visible = false;
             // 
             // bntopsosyalMuhendislik
             // 
@@ -98,6 +99,7 @@
             bntopsosyalMuhendislik.TabIndex = 3;
             bntopsosyalMuhendislik.Text = "Sosyal Mühendislik";
             bntopsosyalMuhendislik.UseVisualStyleBackColor = true;
+            bntopsosyalMuhendislik.Click += bntopsosyalMuhendislik_Click;
             // 
             // btnzararliYazilimlar
             // 
@@ -112,6 +114,7 @@
             btnzararliYazilimlar.TabIndex = 2;
             btnzararliYazilimlar.Text = "Zararlı Yazılımlar";
             btnzararliYazilimlar.UseVisualStyleBackColor = true;
+            btnzararliYazilimlar.Click += btnzararliYazilimlar_Click;
             // 
             // btnTopAgBilgisi
             // 
@@ -126,6 +129,7 @@
             btnTopAgBilgisi.TabIndex = 1;
             btnTopAgBilgisi.Text = "Ağ Bilgisi";
             btnTopAgBilgisi.UseVisualStyleBackColor = true;
+            btnTopAgBilgisi.Click += btnTopAgBilgisi_Click;
             // 
             // btnTopSiberGuvenligeGiris
             // 
@@ -140,20 +144,30 @@
             btnTopSiberGuvenligeGiris.TabIndex = 0;
             btnTopSiberGuvenligeGiris.Text = "Siber Güvenliğe Giriş";
             btnTopSiberGuvenligeGiris.UseVisualStyleBackColor = true;
+            btnTopSiberGuvenligeGiris.Click += btnTopSiberGuvenligeGiris_Click;
+            // 
+            // pnlTest
+            // 
+            pnlTest.Dock = DockStyle.Fill;
+            pnlTest.Location = new Point(0, 0);
+            pnlTest.Name = "pnlTest";
+            pnlTest.Size = new Size(1209, 714);
+            pnlTest.TabIndex = 2;
             // 
             // Testler
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(25, 28, 55);
-            ClientSize = new Size(1234, 682);
-            Controls.Add(pnlTopics);
+            ClientSize = new Size(1209, 714);
+            Controls.Add(pnlKonuMenu);
             Controls.Add(pnlTestler);
+            Controls.Add(pnlTest);
             Name = "Testler";
             ShowIcon = false;
             Text = "Testler";
             pnlTestler.ResumeLayout(false);
-            pnlTopics.ResumeLayout(false);
+            pnlKonuMenu.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -162,10 +176,11 @@
 
         private Panel pnlTestler;
         private FontAwesome.Sharp.IconButton btnChoiseTopics;
-        private Panel pnlTopics;
+        private Panel pnlKonuMenu;
         private Button bntopsosyalMuhendislik;
         private Button btnzararliYazilimlar;
         private Button btnTopAgBilgisi;
         private Button btnTopSiberGuvenligeGiris;
+        private Panel pnlTest;
     }
 }
