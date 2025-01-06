@@ -28,12 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "konu_SiberGuvenligeGiris";
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel1.SuspendLayout();
+            SuspendLayout();
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(25, 28, 55);
+            panel1.Controls.Add(panel2);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1191, 667);
+            panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(1191, 54);
+            panel2.TabIndex = 1;
+            // 
+            // konu_SiberGuvenligeGiris
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1191, 667);
+            Controls.Add(panel1);
+            Name = "konu_SiberGuvenligeGiris";
+            Text = "konu_SiberGuvenligeGiris";
+            panel1.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel panel1;
+        private Panel panel2;
     }
 }

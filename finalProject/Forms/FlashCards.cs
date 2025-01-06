@@ -28,49 +28,49 @@ namespace finalProject.Forms
         int originalWidth = 180;      // Kartın orijinal genişliği
         private Button currentButton;
 
+
         //db den veri çekme
-        private List<Card> LoadCardsFromDatabase()
+        private List<Card> LoadRandomCardsFromDatabase()
         {
             string connectionString = "Server=localhost;Database=projectdb;Uid=root;Pwd=;";
-            List<Card> loadedCards = new List<Card>();
+            List<Card> randomCards = new List<Card>();
 
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open(); // Bağlantıyı aç
-                string query = "SELECT Kavram, Açıklama FROM flashcards"; // Sorgu
+                string query = "SELECT Kavram, Açıklama FROM flashcards ORDER BY RAND() LIMIT 8"; // Rastgele veriler
 
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
-                    int buttonIndex = 1; // Butonları sırayla bağlamak için sayaç
+                    int buttonIndex = 1; // Butonlara sırasıyla bağlamak için sayaç
                     while (reader.Read())
                     {
                         string frontText = reader.GetString("Kavram"); // Kavram sütunu
                         string backText = reader.GetString("Açıklama"); // Açıklama sütunu
 
-                        // İlgili butonu bul
                         Button relatedButton = Controls.Find($"btnCard{buttonIndex}", true).FirstOrDefault() as Button;
 
                         if (relatedButton != null)
                         {
-                            // Yeni bir kart oluştur ve listeye ekle
-                            loadedCards.Add(new Card(frontText, backText, relatedButton));
+                            // Yeni kart oluştur ve listeye ekle
+                            randomCards.Add(new Card(frontText, backText, relatedButton));
                             buttonIndex++;
                         }
                     }
                 }
             }
 
-            return loadedCards;
+            return randomCards;
         }
 
-
+        
         public FlashCards()
         {
             InitializeComponent();
 
             //kartları db den yükle
-            cards = LoadCardsFromDatabase();
+            cards = LoadRandomCardsFromDatabase();
 
             //kartların butonlara atanması
             foreach (var card in cards)
@@ -153,7 +153,18 @@ namespace finalProject.Forms
             }
             else
             {
-                currentButton.Text = cards.First(c => c.RelatedButton == currentButton).FrontText;
+                // Metni ve rengini değiştir
+                if (currentButton.BackColor == Color.BlueViolet)
+                {
+                    currentButton.Text = currentButton.Tag.ToString();
+                    currentButton.BackColor = Color.FromArgb(100, 30, 120); // arka yüz rengi
+                }
+                else
+                {
+                    
+                    currentButton.BackColor = Color.FromArgb(100, 30, 120); // Arka yüz rengi
+                }
+
                 // Kart tekrar eski boyuta ulaştığında animasyonu durdur
                 timer1.Stop();
                 isFlipped = false; // Kartı tekrar çevirme durumu
@@ -161,10 +172,7 @@ namespace finalProject.Forms
             }
         }
 
-        private void UpdateText(object sender)
-        {
-            
-        }
+       
 
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -198,15 +206,26 @@ namespace finalProject.Forms
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
+            // Kartları veritabanından yeniden yükle
+            cards = LoadRandomCardsFromDatabase();
+
+            // Her butonu rastgele bir kartla güncelle
+            int index = 0;
             foreach (var card in cards)
             {
-                Button btn = card.RelatedButton;
+                Button btn = Controls.Find($"btnCard{index + 1}", true).FirstOrDefault() as Button;
 
-                // Kartın ön yüzüne çevir
-                btn.BackColor = card.FrontColor;
-                btn.Text = card.FrontText;
-                btn.Width = 180; 
+                if (btn != null)
+                {
+                    btn.BackColor = card.FrontColor; // Ön yüz rengi
+                    btn.Text = card.FrontText;       // Yeni ön yüz metni
+                    btn.Tag = card.BackText;         // Arka yüz metni
+                    btn.Width = 180;       // Orijinal genişlik
+                }
+
+                index++;
             }
         }
+
     }
 }
