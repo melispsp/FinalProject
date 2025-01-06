@@ -103,7 +103,7 @@ namespace finalProject
 
         }
 
-        private void OpenChildForm(Form childForm)
+        private void OpenMainChildForm(Form childForm)
         {
             //open only form
             if (currentChildForm != null)
@@ -120,7 +120,6 @@ namespace finalProject
             childForm.BringToFront();
             childForm.Show();
             lblHome.Text = childForm.Text;
-
         }
 
 
@@ -129,28 +128,28 @@ namespace finalProject
         {
             ActivateButton(sender, RGBColors.color1);
             btnHome.IconColor = RGBColors.color1;
-            OpenChildForm(new Forms.Dersler());
+            OpenMainChildForm(new Forms.Dersler());
         }
 
         private void btnFlashcards_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color2);
             btnHome.IconColor = RGBColors.color2;
-            OpenChildForm(new Forms.FlashCards());
+            OpenMainChildForm(new Forms.FlashCards());
         }
 
         private void btnTests_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color3);
             btnHome.IconColor = RGBColors.color3;
-            OpenChildForm(new Forms.Testler());
+            OpenMainChildForm(new Forms.Testler());
         }
 
         private void btnSimulations_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, RGBColors.color4);
             btnHome.IconColor = RGBColors.color4;
-            OpenChildForm(new Forms.Simülasyonlar());
+            OpenMainChildForm(new Forms.Simülasyonlar());
         }
 
         private void Reset()
@@ -209,45 +208,6 @@ namespace finalProject
             }
             Reset();
         }
-
-
-
-
-
-        // database funcs
-
-        private MySqlConnection GetConnection()
-        {
-            string connString = $"Server={server};Database={database};Uid={uid};Pwd={password};";
-            return new MySqlConnection(connString);
-        }
-
-        private void KayitEkle(string ad, string soyad, string email, string sifre)
-        {
-            try
-            {
-                using (MySqlConnection conn = GetConnection())
-                {
-                    conn.Open();
-                    string query = "INSERT INTO kullanicilar (ad, soyad, email, sifre) VALUES (@firstname @lastname, @email, @password)";
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@firstname", ad);
-                        cmd.Parameters.AddWithValue("@lastname", soyad);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@password", sifre);
-
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Kullanýcý baþarýyla kaydedildi!");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Hata: " + ex.Message);
-            }
-        }
-
 
     }
 }

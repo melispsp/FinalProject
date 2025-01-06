@@ -39,17 +39,19 @@
             label1 = new Label();
             PicUserProfile = new PictureBox();
             pnlTopBar = new Panel();
+            label2 = new Label();
             lblHome = new Label();
             btnSettings = new FontAwesome.Sharp.IconButton();
             btnHome = new FontAwesome.Sharp.IconButton();
             pnlShadow = new Panel();
             pnlDesktop = new Panel();
             ıconButton1 = new FontAwesome.Sharp.IconButton();
-            ıconButton2 = new FontAwesome.Sharp.IconButton();
-            ıconButton3 = new FontAwesome.Sharp.IconButton();
-            ıconButton4 = new FontAwesome.Sharp.IconButton();
-            ıconButton5 = new FontAwesome.Sharp.IconButton();
             pnlSettinsBar = new Panel();
+            ıconButton3 = new FontAwesome.Sharp.IconButton();
+            label4 = new Label();
+            ıconButton2 = new FontAwesome.Sharp.IconButton();
+            label3 = new Label();
+            ıconButton4 = new FontAwesome.Sharp.IconButton();
             panelMenu.SuspendLayout();
             PnlUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)PicUserProfile).BeginInit();
@@ -175,10 +177,10 @@
             btnOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnOut.IconSize = 40;
             btnOut.ImageAlign = ContentAlignment.MiddleLeft;
-            btnOut.Location = new Point(0, 754);
+            btnOut.Location = new Point(0, 749);
             btnOut.Name = "btnOut";
             btnOut.Padding = new Padding(10, 0, 20, 0);
-            btnOut.Size = new Size(220, 45);
+            btnOut.Size = new Size(220, 50);
             btnOut.TabIndex = 5;
             btnOut.Text = "Çıkış Yap";
             btnOut.UseVisualStyleBackColor = false;
@@ -220,6 +222,7 @@
             // pnlTopBar
             // 
             pnlTopBar.BackColor = Color.FromArgb(20, 0, 32);
+            pnlTopBar.Controls.Add(label2);
             pnlTopBar.Controls.Add(lblHome);
             pnlTopBar.Controls.Add(btnSettings);
             pnlTopBar.Controls.Add(btnHome);
@@ -229,6 +232,21 @@
             pnlTopBar.Size = new Size(1227, 60);
             pnlTopBar.TabIndex = 1;
             pnlTopBar.MouseDown += pnlTopBar_MouseDown;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Right;
+            label2.FlatStyle = FlatStyle.Flat;
+            label2.Font = new Font("Arial Rounded MT Bold", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.WhiteSmoke;
+            label2.Location = new Point(998, 0);
+            label2.Name = "label2";
+            label2.Padding = new Padding(0, 20, 5, 0);
+            label2.Size = new Size(154, 40);
+            label2.TabIndex = 3;
+            label2.Text = "Merhaba, Melisa!";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblHome
             // 
@@ -251,9 +269,9 @@
             btnSettings.IconColor = Color.Gainsboro;
             btnSettings.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnSettings.IconSize = 40;
-            btnSettings.Location = new Point(1167, 0);
+            btnSettings.Location = new Point(1152, 0);
             btnSettings.Name = "btnSettings";
-            btnSettings.Size = new Size(60, 60);
+            btnSettings.Size = new Size(75, 60);
             btnSettings.TabIndex = 1;
             btnSettings.UseVisualStyleBackColor = true;
             btnSettings.Click += btnSettings_Click;
@@ -308,29 +326,26 @@
             ıconButton1.Location = new Point(0, 0);
             ıconButton1.Name = "ıconButton1";
             ıconButton1.Padding = new Padding(0, 10, 0, 10);
-            ıconButton1.Size = new Size(230, 45);
+            ıconButton1.Size = new Size(230, 50);
             ıconButton1.TabIndex = 0;
-            ıconButton1.Text = "ıconButton1";
+            ıconButton1.Text = "Profilim";
             ıconButton1.UseVisualStyleBackColor = true;
             // 
-            // ıconButton2
+            // pnlSettinsBar
             // 
-            ıconButton2.Dock = DockStyle.Top;
-            ıconButton2.FlatAppearance.BorderSize = 0;
-            ıconButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
-            ıconButton2.FlatStyle = FlatStyle.Flat;
-            ıconButton2.ForeColor = Color.Lavender;
-            ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            ıconButton2.IconColor = Color.Lavender;
-            ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton2.IconSize = 44;
-            ıconButton2.Location = new Point(0, 45);
-            ıconButton2.Name = "ıconButton2";
-            ıconButton2.Padding = new Padding(0, 10, 0, 10);
-            ıconButton2.Size = new Size(230, 45);
-            ıconButton2.TabIndex = 1;
-            ıconButton2.Text = "ıconButton2";
-            ıconButton2.UseVisualStyleBackColor = true;
+            pnlSettinsBar.BackColor = Color.FromArgb(20, 0, 32);
+            pnlSettinsBar.Controls.Add(ıconButton3);
+            pnlSettinsBar.Controls.Add(label4);
+            pnlSettinsBar.Controls.Add(ıconButton2);
+            pnlSettinsBar.Controls.Add(label3);
+            pnlSettinsBar.Controls.Add(ıconButton4);
+            pnlSettinsBar.Controls.Add(ıconButton1);
+            pnlSettinsBar.Dock = DockStyle.Right;
+            pnlSettinsBar.Location = new Point(1217, 60);
+            pnlSettinsBar.Name = "pnlSettinsBar";
+            pnlSettinsBar.Size = new Size(230, 739);
+            pnlSettinsBar.TabIndex = 2;
+            pnlSettinsBar.Visible = false;
             // 
             // ıconButton3
             // 
@@ -343,17 +358,61 @@
             ıconButton3.IconColor = Color.Lavender;
             ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ıconButton3.IconSize = 44;
-            ıconButton3.Location = new Point(0, 90);
+            ıconButton3.Location = new Point(0, 130);
             ıconButton3.Name = "ıconButton3";
             ıconButton3.Padding = new Padding(0, 10, 0, 10);
-            ıconButton3.Size = new Size(230, 45);
-            ıconButton3.TabIndex = 2;
-            ıconButton3.Text = "ıconButton3";
+            ıconButton3.Size = new Size(230, 50);
+            ıconButton3.TabIndex = 6;
+            ıconButton3.Text = "Tüm Kategoriler";
             ıconButton3.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Dock = DockStyle.Top;
+            label4.Font = new Font("Bell MT", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.DarkMagenta;
+            label4.Location = new Point(0, 115);
+            label4.Name = "label4";
+            label4.Size = new Size(227, 15);
+            label4.TabIndex = 5;
+            label4.Text = "-------------------------------------------------------";
+            // 
+            // ıconButton2
+            // 
+            ıconButton2.Dock = DockStyle.Top;
+            ıconButton2.FlatAppearance.BorderSize = 0;
+            ıconButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
+            ıconButton2.FlatStyle = FlatStyle.Flat;
+            ıconButton2.ForeColor = Color.Lavender;
+            ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            ıconButton2.IconColor = Color.Lavender;
+            ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton2.IconSize = 44;
+            ıconButton2.Location = new Point(0, 65);
+            ıconButton2.Name = "ıconButton2";
+            ıconButton2.Padding = new Padding(0, 10, 0, 10);
+            ıconButton2.Size = new Size(230, 50);
+            ıconButton2.TabIndex = 4;
+            ıconButton2.Text = "Notlarım";
+            ıconButton2.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(20, 0, 32);
+            label3.Dock = DockStyle.Top;
+            label3.Font = new Font("Bell MT", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.DarkMagenta;
+            label3.Location = new Point(0, 50);
+            label3.Name = "label3";
+            label3.Size = new Size(227, 15);
+            label3.TabIndex = 0;
+            label3.Text = "-------------------------------------------------------";
             // 
             // ıconButton4
             // 
-            ıconButton4.Dock = DockStyle.Top;
+            ıconButton4.Dock = DockStyle.Bottom;
             ıconButton4.FlatAppearance.BorderSize = 0;
             ıconButton4.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
             ıconButton4.FlatStyle = FlatStyle.Flat;
@@ -362,47 +421,13 @@
             ıconButton4.IconColor = Color.Lavender;
             ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             ıconButton4.IconSize = 44;
-            ıconButton4.Location = new Point(0, 135);
+            ıconButton4.Location = new Point(0, 689);
             ıconButton4.Name = "ıconButton4";
             ıconButton4.Padding = new Padding(0, 10, 0, 10);
-            ıconButton4.Size = new Size(230, 45);
+            ıconButton4.Size = new Size(230, 50);
             ıconButton4.TabIndex = 3;
-            ıconButton4.Text = "ıconButton4";
+            ıconButton4.Text = "Uygulama Hakkında";
             ıconButton4.UseVisualStyleBackColor = true;
-            // 
-            // ıconButton5
-            // 
-            ıconButton5.Dock = DockStyle.Top;
-            ıconButton5.FlatAppearance.BorderSize = 0;
-            ıconButton5.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 30, 50);
-            ıconButton5.FlatStyle = FlatStyle.Flat;
-            ıconButton5.ForeColor = Color.Lavender;
-            ıconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
-            ıconButton5.IconColor = Color.Lavender;
-            ıconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton5.IconSize = 44;
-            ıconButton5.Location = new Point(0, 180);
-            ıconButton5.Name = "ıconButton5";
-            ıconButton5.Padding = new Padding(0, 10, 0, 10);
-            ıconButton5.Size = new Size(230, 45);
-            ıconButton5.TabIndex = 4;
-            ıconButton5.Text = "ıconButton5";
-            ıconButton5.UseVisualStyleBackColor = true;
-            // 
-            // pnlSettinsBar
-            // 
-            pnlSettinsBar.BackColor = Color.FromArgb(20, 0, 32);
-            pnlSettinsBar.Controls.Add(ıconButton5);
-            pnlSettinsBar.Controls.Add(ıconButton4);
-            pnlSettinsBar.Controls.Add(ıconButton3);
-            pnlSettinsBar.Controls.Add(ıconButton2);
-            pnlSettinsBar.Controls.Add(ıconButton1);
-            pnlSettinsBar.Dock = DockStyle.Right;
-            pnlSettinsBar.Location = new Point(1217, 60);
-            pnlSettinsBar.Name = "pnlSettinsBar";
-            pnlSettinsBar.Size = new Size(230, 739);
-            pnlSettinsBar.TabIndex = 2;
-            pnlSettinsBar.Visible = false;
             // 
             // MainForm
             // 
@@ -432,6 +457,7 @@
             pnlTopBar.ResumeLayout(false);
             pnlTopBar.PerformLayout();
             pnlSettinsBar.ResumeLayout(false);
+            pnlSettinsBar.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -453,10 +479,12 @@
         private Panel pnlDesktop;
         private Label lblHome;
         private FontAwesome.Sharp.IconButton ıconButton1;
-        private FontAwesome.Sharp.IconButton ıconButton2;
-        private FontAwesome.Sharp.IconButton ıconButton3;
-        private FontAwesome.Sharp.IconButton ıconButton4;
-        private FontAwesome.Sharp.IconButton ıconButton5;
         private Panel pnlSettinsBar;
+        private Label label2;
+        private FontAwesome.Sharp.IconButton ıconButton4;
+        private Label label3;
+        private FontAwesome.Sharp.IconButton ıconButton3;
+        private Label label4;
+        private FontAwesome.Sharp.IconButton ıconButton2;
     }
 }
