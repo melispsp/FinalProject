@@ -350,6 +350,7 @@
             button3.TabIndex = 1;
             button3.Text = "Derse Başla";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += btnDersIcerigi;
             // 
             // button4
             // 

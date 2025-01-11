@@ -68,9 +68,9 @@ namespace finalProject.Forms
             pnlKonuMenu.Visible = false;
         }
 
-        private void bntopsosyalMuhendislik_Click(object sender, EventArgs e)
+        private void btnsosyalMuhendislik_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.konu_sosyalMuhendislik());
+            OpenChildForm(new Forms.konu_sosyalMuhendislik(1));
             pnlKonuMenu.Visible = false;
         }
     }
