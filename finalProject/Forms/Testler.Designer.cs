@@ -99,7 +99,7 @@
             bntopsosyalMuhendislik.TabIndex = 3;
             bntopsosyalMuhendislik.Text = "Sosyal Mühendislik";
             bntopsosyalMuhendislik.UseVisualStyleBackColor = true;
-            bntopsosyalMuhendislik.Click += bntopsosyalMuhendislik_Click;
+            bntopsosyalMuhendislik.Click += btnsosyalMuhendislik_Click;
             // 
             // btnzararliYazilimlar
             // 

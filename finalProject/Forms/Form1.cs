@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using finalProject.Forms;
 using FontAwesome.Sharp;
 using MySql.Data.MySqlClient;
 using Color = System.Drawing.Color;
@@ -20,6 +21,7 @@ namespace finalProject
 {
     public partial class MainForm : Form
     {
+
         // mysql server
         string server = "localhost";
         string uid = "root";
@@ -31,11 +33,20 @@ namespace finalProject
         private IconButton currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+        private List<Image> images = new List<Image>();
+        private int currentImageIndex = 0; // baþta gösterilen görselin indeksi
+        private int animationStep = 10; // Her adýmda kaç piksel kayacak
+        private int animationX = 0; // Geçiþin baþlangýç konumu
 
         //constructor
         public MainForm()
         {
+
             InitializeComponent();
+            InitializeSlider();
+            images.Add(Image.FromFile("C:/c# proje/homepage1.jpeg"));
+            images.Add(Image.FromFile("C:/c# proje/homepage2.jpeg"));
+            images.Add(Image.FromFile("C:/c# proje/homepage3.jpeg"));
 
             //active edildiktem sonra yanda çýkan küçük renkli þey
             leftBorderBtn = new Panel();
@@ -49,6 +60,25 @@ namespace finalProject
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
         }
+
+        private void InitializeSlider()
+        {
+            try
+            {
+                pnlSlider.BackgroundImage = images[currentImageIndex];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata: {ex.Message}");
+            }
+            pnlSlider.BackgroundImageLayout = ImageLayout.Stretch;
+
+            // Timer ayarlarý
+            sliderTimer.Tick += sliderTimer_Tick_1;
+            sliderTimer.Start();
+        }
+
+
 
         //sutructs
         private struct RGBColors
@@ -181,8 +211,12 @@ namespace finalProject
             if (pnlSettinsBar.Visible == true)
             {
                 pnlSettinsBar.Visible = false;
+                pnlKategoriler.Visible = false;
             }
-            else { pnlSettinsBar.Visible = true; }
+            else
+            {
+                pnlSettinsBar.Visible = true;
+            }
 
         }
 
@@ -207,6 +241,26 @@ namespace finalProject
                 currentChildForm.Close();
             }
             Reset();
+        }
+
+        private void sliderTimer_Tick_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnKategoriler_Click(object sender, EventArgs e)
+        {
+            if (pnlKategoriler.Visible ? pnlKategoriler.Visible = false : pnlKategoriler.Visible = true) ;
+        }
+
+        private void buttonKategoriler_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNotlarým_Click(object sender, EventArgs e)
+        {
+            OpenMainChildForm(new Forms.Notlarým());
         }
 
     }

@@ -128,15 +128,17 @@ namespace finalProject.Forms
             }
             else
             {
+                var card = cards.FirstOrDefault(c => c.RelatedButton == currentButton);
+
                 // Metni ve rengini değiştir
                 if (currentButton.BackColor == Color.FromArgb(100, 30, 120))
-                {
-
+                {                   
+                    currentButton.Text = card.FrontText; 
                     currentButton.BackColor = Color.BlueViolet; // Ön yüz rengi
                 }
                 else
                 {
-                    currentButton.Text = currentButton.Tag.ToString();
+                    currentButton.Text = card.BackText;
                     currentButton.BackColor = Color.FromArgb(100, 30, 120); // Arka yüz rengi
                 }
                 isFlipped = true;         // Artık genişleme başlasın
@@ -153,22 +155,23 @@ namespace finalProject.Forms
             }
             else
             {
+                var card = cards.FirstOrDefault(c => c.RelatedButton == currentButton);
+
                 // Metni ve rengini değiştir
                 if (currentButton.BackColor == Color.BlueViolet)
-                {
-                    currentButton.Text = currentButton.Tag.ToString();
-                    currentButton.BackColor = Color.FromArgb(100, 30, 120); // arka yüz rengi
+                {                    
+                    currentButton.Text = card.FrontText;
+                    currentButton.BackColor = Color.BlueViolet; // Ön yüz rengi
                 }
                 else
                 {
-                    
+                    currentButton.Text = card.BackText;
                     currentButton.BackColor = Color.FromArgb(100, 30, 120); // Arka yüz rengi
                 }
 
                 // Kart tekrar eski boyuta ulaştığında animasyonu durdur
                 timer1.Stop();
                 isFlipped = false; // Kartı tekrar çevirme durumu
-
             }
         }
 
@@ -180,10 +183,12 @@ namespace finalProject.Forms
             if (!isFlipped)
             {
                 ShowBack();
+              
             }
             else
             {
                 ShowFront();
+               
             }
         }
 

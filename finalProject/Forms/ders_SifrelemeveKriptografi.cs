@@ -9,40 +9,30 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-
 namespace finalProject.Forms
 {
-    public partial class Dersler_siberGüvenligeGiris : Form
+    public partial class ders_SifrelemeveKriptografi : Form
     {
-        string connectionString = "Server=localhost;Database=projectdb;Uid=root;Pwd=;";
-        private Form currentChildForm;
+        // Bağlantı dizesi (connection string) burada tanımlı olmalı.
+        string connectionString = "your_connection_string_here";
 
-        public Dersler_siberGüvenligeGiris()
+        public ders_SifrelemeveKriptografi()
         {
             InitializeComponent();
         }
-        
-        private void OpenChildForm(Form childForm)
-        {
-            //open only form
-            if (currentChildForm != null)
-            {
-                currentChildForm.Close();
-            }
-            currentChildForm = childForm;
-            //End
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            pnlDers.Controls.Add(childForm);
-            pnlDers.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-        private void btnDersIcerigi(object sender, EventArgs e)
-        {
-            string connectionString = "Server=localhost;Database=projectdb;Uid=root;Pwd=;";
 
+        // Ders içeriğini formdaki TextBox'a yazdıracak bir property
+        public string DersIcerigi
+        {
+            set
+            {
+                tboxDersIcerigi.Text = value; // Ders içeriğini tboxDersIcerigi'ne yazdır
+            }
+        }
+
+        // Form yüklendiğinde veritabanından veri çekip TextBox'lara yazdırma işlemi
+        private void ders_SifrelemeveKriptografi_Load(object sender, EventArgs e)
+        {
             try
             {
                 // MySQL bağlantısını aç
@@ -51,7 +41,7 @@ namespace finalProject.Forms
                     connection.Open();
 
                     // SQL sorgusu: dersicerigi tablosundaki ders adı ve ders içeriğini çek
-                    string query = "SELECT `ders adı`, `ders içeriği` FROM dersiceriği";
+                    string query = "SELECT `ders adı`, `ders içeriği` FROM dersicerigi";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
@@ -59,24 +49,17 @@ namespace finalProject.Forms
                         {
                             if (reader.HasRows) // Eğer veri varsa
                             {
-                                string icerik = "";
-                                string baslik = "";
-
                                 while (reader.Read()) // Verileri sırayla oku
                                 {
                                     // Ders adını ve ders içeriğini al
                                     string dersAdi = reader["ders adı"].ToString();
                                     string dersIcerigi = reader["ders içeriği"].ToString();
 
-                                    baslik += $"{dersAdi}";
-                                    icerik += $"{dersIcerigi}";
+                                    // Ders adı tboxDersAdi'ne yazdır
+                                    lblDersAdi.Text = dersAdi;
+                                    // Ders içeriğini DersIcerigi property aracılığıyla tboxDersIcerigi'ne yazdır
+                                    DersIcerigi = dersIcerigi;
                                 }
-
-                                // Yeni formu aç ve notları gönder
-                                Forms.ders_SiberGuvenlikNedir ders = new Forms.ders_SiberGuvenlikNedir();
-                                ders.DersIcerigi = icerik;
-                                ders.DersAdi = baslik;
-                                OpenChildForm(ders);
                             }
                             else
                             {
@@ -93,6 +76,5 @@ namespace finalProject.Forms
                 MessageBox.Show($"Bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
     }
 }

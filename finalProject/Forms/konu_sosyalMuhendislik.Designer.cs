@@ -43,10 +43,6 @@
             label8 = new Label();
             label9 = new Label();
             panel5 = new Panel();
-            ıconButton1 = new FontAwesome.Sharp.IconButton();
-            label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
             panel3 = new Panel();
             pnlSosyalMühendislikTest1 = new Panel();
             btnSosMühTest1 = new FontAwesome.Sharp.IconButton();
@@ -54,13 +50,16 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            ıconButton1 = new FontAwesome.Sharp.IconButton();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
             panel1.SuspendLayout();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
             panel4.SuspendLayout();
             panel6.SuspendLayout();
             panel7.SuspendLayout();
-            panel5.SuspendLayout();
             panel3.SuspendLayout();
             pnlSosyalMühendislikTest1.SuspendLayout();
             SuspendLayout();
@@ -75,7 +74,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1191, 1055);
+            panel1.Size = new Size(1191, 899);
             panel1.TabIndex = 1;
             // 
             // panel8
@@ -122,8 +121,9 @@
             btnSosMühTest3.Text = "Teste Başla";
             btnSosMühTest3.TextAlign = ContentAlignment.MiddleLeft;
             btnSosMühTest3.UseVisualStyleBackColor = false;
-            btnSosMühTest3.MouseLeave += btnSosMühTest3_MouseLeave;
-            btnSosMühTest3.MouseHover += btnSosMühTest3_MouseHover;
+            btnSosMühTest3.Click += btnTestBasla_Click;
+            btnSosMühTest3.MouseLeave += btnSosMühTest_MouseLeave;
+            btnSosMühTest3.MouseHover += btnSosMühTest_MouseHover;
             // 
             // label10
             // 
@@ -214,8 +214,9 @@
             btnSosMühTest2.Text = "Teste Başla";
             btnSosMühTest2.TextAlign = ContentAlignment.MiddleLeft;
             btnSosMühTest2.UseVisualStyleBackColor = false;
-            btnSosMühTest2.MouseLeave += btnSosMühTest2_MouseLeave;
-            btnSosMühTest2.MouseHover += btnSosMühTest2_MouseHover;
+            btnSosMühTest2.Click += btnTestBasla_Click;
+            btnSosMühTest2.MouseLeave += btnSosMühTest_MouseLeave;
+            btnSosMühTest2.MouseHover += btnSosMühTest_MouseHover;
             // 
             // label7
             // 
@@ -254,74 +255,10 @@
             // 
             // panel5
             // 
-            panel5.BackColor = Color.FromArgb(45, 45, 70);
-            panel5.BorderStyle = BorderStyle.FixedSingle;
-            panel5.Controls.Add(ıconButton1);
-            panel5.Controls.Add(label4);
-            panel5.Controls.Add(label5);
-            panel5.Controls.Add(label6);
-            panel5.Location = new Point(57, 38);
+            panel5.Location = new Point(0, 0);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1076, 190);
-            panel5.TabIndex = 0;
-            // 
-            // ıconButton1
-            // 
-            ıconButton1.BackColor = Color.Lime;
-            ıconButton1.FlatAppearance.BorderColor = Color.LightGreen;
-            ıconButton1.FlatAppearance.BorderSize = 2;
-            ıconButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 200, 0);
-            ıconButton1.FlatStyle = FlatStyle.Flat;
-            ıconButton1.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            ıconButton1.ForeColor = Color.Black;
-            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
-            ıconButton1.IconColor = Color.Black;
-            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton1.IconSize = 35;
-            ıconButton1.ImageAlign = ContentAlignment.MiddleRight;
-            ıconButton1.Location = new Point(798, 65);
-            ıconButton1.Name = "ıconButton1";
-            ıconButton1.Padding = new Padding(10, 5, 20, 5);
-            ıconButton1.Size = new Size(203, 59);
-            ıconButton1.TabIndex = 4;
-            ıconButton1.Text = "Teste Başla";
-            ıconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            ıconButton1.UseVisualStyleBackColor = false;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.FlatStyle = FlatStyle.Flat;
-            label4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 162);
-            label4.ForeColor = Color.Gainsboro;
-            label4.Location = new Point(30, 122);
-            label4.Name = "label4";
-            label4.Size = new Size(81, 23);
-            label4.TabIndex = 2;
-            label4.Text = "Bol Şans!";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label5.ForeColor = Color.Silver;
-            label5.Location = new Point(30, 57);
-            label5.Name = "label5";
-            label5.Size = new Size(66, 23);
-            label5.TabIndex = 1;
-            label5.Text = "10 Soru";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.FlatStyle = FlatStyle.Flat;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            label6.ForeColor = Color.Gainsboro;
-            label6.Location = new Point(30, 18);
-            label6.Name = "label6";
-            label6.Size = new Size(256, 28);
-            label6.TabIndex = 0;
-            label6.Text = "Sosyal Mühendislik Test 1";
+            panel5.Size = new Size(200, 100);
+            panel5.TabIndex = 3;
             // 
             // panel3
             // 
@@ -367,8 +304,9 @@
             btnSosMühTest1.Text = "Teste Başla";
             btnSosMühTest1.TextAlign = ContentAlignment.MiddleLeft;
             btnSosMühTest1.UseVisualStyleBackColor = false;
-            btnSosMühTest1.MouseLeave += btnSosMühTest1_MouseLeave;
-            btnSosMühTest1.MouseHover += btnSosMühTest1_MouseHover;
+            btnSosMühTest1.Click += btnTestBasla_Click;
+            btnSosMühTest1.MouseLeave += btnSosMühTest_MouseLeave;
+            btnSosMühTest1.MouseHover += btnSosMühTest_MouseHover;
             // 
             // label3
             // 
@@ -413,11 +351,42 @@
             panel2.Size = new Size(1191, 54);
             panel2.TabIndex = 0;
             // 
+            // ıconButton1
+            // 
+            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            ıconButton1.IconColor = Color.Black;
+            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton1.Location = new Point(0, 0);
+            ıconButton1.Name = "ıconButton1";
+            ıconButton1.Size = new Size(75, 23);
+            ıconButton1.TabIndex = 0;
+            // 
+            // label4
+            // 
+            label4.Location = new Point(0, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(100, 23);
+            label4.TabIndex = 0;
+            // 
+            // label5
+            // 
+            label5.Location = new Point(0, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(100, 23);
+            label5.TabIndex = 0;
+            // 
+            // label6
+            // 
+            label6.Location = new Point(0, 0);
+            label6.Name = "label6";
+            label6.Size = new Size(100, 23);
+            label6.TabIndex = 0;
+            // 
             // konu_sosyalMuhendislik
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1191, 1055);
+            ClientSize = new Size(1191, 899);
             Controls.Add(panel1);
             Name = "konu_sosyalMuhendislik";
             Text = "konu_sosyalMuhendislik";
@@ -429,8 +398,6 @@
             panel6.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
             panel3.ResumeLayout(false);
             pnlSosyalMühendislikTest1.ResumeLayout(false);
             pnlSosyalMühendislikTest1.PerformLayout();
