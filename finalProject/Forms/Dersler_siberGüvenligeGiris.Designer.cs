@@ -28,34 +28,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dersler_siberGüvenligeGiris));
-            panel1 = new Panel();
+            pnlBackPanel = new Panel();
             pnlDers = new Panel();
             panel6 = new Panel();
             textBox4 = new TextBox();
-            button7 = new Button();
+            btnDers4 = new Button();
             button8 = new Button();
             label8 = new Label();
             label3 = new Label();
             panel5 = new Panel();
             textBox3 = new TextBox();
-            button5 = new Button();
+            btnDers3 = new Button();
             button6 = new Button();
             label5 = new Label();
             label1 = new Label();
             panel4 = new Panel();
             textBox1 = new TextBox();
-            button1 = new Button();
+            btnDers2 = new Button();
             button2 = new Button();
             label2 = new Label();
             label4 = new Label();
             panel9 = new Panel();
             textBox2 = new TextBox();
-            button3 = new Button();
+            btnDers1 = new Button();
             button4 = new Button();
             label7 = new Label();
             panel3 = new Panel();
             panel2 = new Panel();
-            panel1.SuspendLayout();
+            pnlBackPanel.SuspendLayout();
             pnlDers.SuspendLayout();
             panel6.SuspendLayout();
             panel5.SuspendLayout();
@@ -63,18 +63,19 @@
             panel9.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // pnlBackPanel
             // 
-            panel1.BackColor = Color.FromArgb(25, 28, 55);
-            panel1.Controls.Add(pnlDers);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1230, 1055);
-            panel1.TabIndex = 0;
+            pnlBackPanel.BackColor = Color.FromArgb(25, 28, 55);
+            pnlBackPanel.Controls.Add(pnlDers);
+            pnlBackPanel.Dock = DockStyle.Fill;
+            pnlBackPanel.Location = new Point(0, 0);
+            pnlBackPanel.Name = "pnlBackPanel";
+            pnlBackPanel.Size = new Size(1230, 1055);
+            pnlBackPanel.TabIndex = 0;
             // 
             // pnlDers
             // 
+            pnlDers.AutoScroll = true;
             pnlDers.Controls.Add(panel6);
             pnlDers.Controls.Add(label3);
             pnlDers.Controls.Add(panel5);
@@ -93,7 +94,7 @@
             // panel6
             // 
             panel6.Controls.Add(textBox4);
-            panel6.Controls.Add(button7);
+            panel6.Controls.Add(btnDers4);
             panel6.Controls.Add(button8);
             panel6.Controls.Add(label8);
             panel6.Dock = DockStyle.Top;
@@ -115,19 +116,20 @@
             textBox4.TabIndex = 2;
             textBox4.Text = resources.GetString("textBox4.Text");
             // 
-            // button7
+            // btnDers4
             // 
-            button7.BackColor = Color.FromArgb(0, 80, 200);
-            button7.FlatAppearance.BorderSize = 0;
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(33, 153);
-            button7.Name = "button7";
-            button7.Size = new Size(259, 42);
-            button7.TabIndex = 1;
-            button7.Text = "Derse Başla";
-            button7.UseVisualStyleBackColor = false;
+            btnDers4.BackColor = Color.FromArgb(0, 80, 200);
+            btnDers4.FlatAppearance.BorderSize = 0;
+            btnDers4.FlatStyle = FlatStyle.Flat;
+            btnDers4.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnDers4.ForeColor = Color.White;
+            btnDers4.Location = new Point(33, 153);
+            btnDers4.Name = "btnDers4";
+            btnDers4.Size = new Size(259, 42);
+            btnDers4.TabIndex = 1;
+            btnDers4.Text = "Derse Başla";
+            btnDers4.UseVisualStyleBackColor = false;
+            btnDers4.Click += btnDersIcerigi;
             // 
             // button8
             // 
@@ -167,7 +169,7 @@
             // panel5
             // 
             panel5.Controls.Add(textBox3);
-            panel5.Controls.Add(button5);
+            panel5.Controls.Add(btnDers3);
             panel5.Controls.Add(button6);
             panel5.Controls.Add(label5);
             panel5.Dock = DockStyle.Top;
@@ -189,19 +191,20 @@
             textBox3.TabIndex = 2;
             textBox3.Text = resources.GetString("textBox3.Text");
             // 
-            // button5
+            // btnDers3
             // 
-            button5.BackColor = Color.FromArgb(0, 80, 200);
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(33, 153);
-            button5.Name = "button5";
-            button5.Size = new Size(259, 42);
-            button5.TabIndex = 1;
-            button5.Text = "Derse Başla";
-            button5.UseVisualStyleBackColor = false;
+            btnDers3.BackColor = Color.FromArgb(0, 80, 200);
+            btnDers3.FlatAppearance.BorderSize = 0;
+            btnDers3.FlatStyle = FlatStyle.Flat;
+            btnDers3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnDers3.ForeColor = Color.White;
+            btnDers3.Location = new Point(33, 153);
+            btnDers3.Name = "btnDers3";
+            btnDers3.Size = new Size(259, 42);
+            btnDers3.TabIndex = 1;
+            btnDers3.Text = "Derse Başla";
+            btnDers3.UseVisualStyleBackColor = false;
+            btnDers3.Click += btnDersIcerigi;
             // 
             // button6
             // 
@@ -241,7 +244,7 @@
             // panel4
             // 
             panel4.Controls.Add(textBox1);
-            panel4.Controls.Add(button1);
+            panel4.Controls.Add(btnDers2);
             panel4.Controls.Add(button2);
             panel4.Controls.Add(label2);
             panel4.Dock = DockStyle.Top;
@@ -263,19 +266,20 @@
             textBox1.TabIndex = 2;
             textBox1.Text = resources.GetString("textBox1.Text");
             // 
-            // button1
+            // btnDers2
             // 
-            button1.BackColor = Color.FromArgb(0, 80, 200);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(33, 153);
-            button1.Name = "button1";
-            button1.Size = new Size(259, 42);
-            button1.TabIndex = 1;
-            button1.Text = "Derse Başla";
-            button1.UseVisualStyleBackColor = false;
+            btnDers2.BackColor = Color.FromArgb(0, 80, 200);
+            btnDers2.FlatAppearance.BorderSize = 0;
+            btnDers2.FlatStyle = FlatStyle.Flat;
+            btnDers2.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnDers2.ForeColor = Color.White;
+            btnDers2.Location = new Point(33, 153);
+            btnDers2.Name = "btnDers2";
+            btnDers2.Size = new Size(259, 42);
+            btnDers2.TabIndex = 1;
+            btnDers2.Text = "Derse Başla";
+            btnDers2.UseVisualStyleBackColor = false;
+            btnDers2.Click += btnDersIcerigi;
             // 
             // button2
             // 
@@ -315,7 +319,7 @@
             // panel9
             // 
             panel9.Controls.Add(textBox2);
-            panel9.Controls.Add(button3);
+            panel9.Controls.Add(btnDers1);
             panel9.Controls.Add(button4);
             panel9.Controls.Add(label7);
             panel9.Dock = DockStyle.Top;
@@ -337,20 +341,20 @@
             textBox2.TabIndex = 2;
             textBox2.Text = resources.GetString("textBox2.Text");
             // 
-            // button3
+            // btnDers1
             // 
-            button3.BackColor = Color.FromArgb(0, 80, 200);
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(33, 153);
-            button3.Name = "button3";
-            button3.Size = new Size(259, 42);
-            button3.TabIndex = 1;
-            button3.Text = "Derse Başla";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += btnDersIcerigi;
+            btnDers1.BackColor = Color.FromArgb(0, 80, 200);
+            btnDers1.FlatAppearance.BorderSize = 0;
+            btnDers1.FlatStyle = FlatStyle.Flat;
+            btnDers1.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnDers1.ForeColor = Color.White;
+            btnDers1.Location = new Point(33, 153);
+            btnDers1.Name = "btnDers1";
+            btnDers1.Size = new Size(259, 42);
+            btnDers1.TabIndex = 1;
+            btnDers1.Text = "Derse Başla";
+            btnDers1.UseVisualStyleBackColor = false;
+            btnDers1.Click += btnDersIcerigi;
             // 
             // button4
             // 
@@ -396,10 +400,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             ClientSize = new Size(1230, 1055);
-            Controls.Add(panel1);
+            Controls.Add(pnlBackPanel);
             Name = "Dersler_siberGüvenligeGiris";
             Text = "Dersler_siberGüvenligeGiris";
-            panel1.ResumeLayout(false);
+            Load += Dersler_siberGüvenligeGiris_Load;
+            pnlBackPanel.ResumeLayout(false);
             pnlDers.ResumeLayout(false);
             pnlDers.PerformLayout();
             panel6.ResumeLayout(false);
@@ -413,31 +418,31 @@
             ResumeLayout(false);
         }
 
-        private Panel panel1;
+        private Panel pnlBackPanel;
         private Panel pnlDers;
         private Panel panel2;
         private Panel panel3;
         private Panel panel6;
         private TextBox textBox4;
-        private Button button7;
+        private Button btnDers4;
         private Button button8;
         private Label label8;
         private Label label3;
         private Panel panel5;
         private TextBox textBox3;
-        private Button button5;
+        private Button btnDers3;
         private Button button6;
         private Label label5;
         private Label label1;
         private Panel panel4;
         private TextBox textBox1;
-        private Button button1;
+        private Button btnDers2;
         private Button button2;
         private Label label2;
         private Label label4;
         private Panel panel9;
         private TextBox textBox2;
-        private Button button3;
+        private Button btnDers1;
         private Button button4;
         private Label label7;
     }

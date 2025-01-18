@@ -73,7 +73,7 @@ namespace finalProject.Forms
         private void btnSiberGuvenligegiris_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Dersler_siberGüvenligeGiris());
-            pnlEgitimlerMenu.Visible=false;
+            pnlEgitimlerMenu.Visible = false;
         }
 
         private void btnAgBilgisi_Click(object sender, EventArgs e)
@@ -105,6 +105,6 @@ namespace finalProject.Forms
             pnlListelerimMenu.Visible = false;
         }
 
-      
+
     }
 }
