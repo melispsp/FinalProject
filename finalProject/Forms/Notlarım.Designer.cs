@@ -140,7 +140,7 @@
             label2.AutoSize = true;
             label2.FlatStyle = FlatStyle.Flat;
             label2.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label2.ForeColor = Color.Yellow;
+            label2.ForeColor = Color.FromArgb(220, 220, 0);
             label2.Location = new Point(90, 373);
             label2.Name = "label2";
             label2.Size = new Size(804, 17);
@@ -152,7 +152,7 @@
             label4.AutoSize = true;
             label4.FlatStyle = FlatStyle.Flat;
             label4.Font = new Font("Century Gothic", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            label4.ForeColor = Color.Yellow;
+            label4.ForeColor = Color.FromArgb(220, 220, 0);
             label4.Location = new Point(92, 143);
             label4.Name = "label4";
             label4.Size = new Size(804, 17);

@@ -14,6 +14,7 @@ namespace finalProject.Forms
 {
     public partial class Dersler_siberGüvenligeGiris : Form
     {
+        private Form dersForm;
         string connectionString = "Server=localhost;Database=projectdb;Uid=root;Pwd=;";
         private Form currentChildForm;
 
@@ -21,7 +22,7 @@ namespace finalProject.Forms
         {
             InitializeComponent();
         }
-        
+                
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -34,54 +35,58 @@ namespace finalProject.Forms
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            pnlDers.Controls.Add(childForm);
-            pnlDers.Tag = childForm;
+            pnlBackPanel.Controls.Add(childForm);
+            pnlBackPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        
         }
+
+
         private void btnDersIcerigi(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost;Database=projectdb;Uid=root;Pwd=;";
+
+            // Tıklanan butonu al
+            Button clickedButton = sender as Button;
+            if (clickedButton == null) return;
+
+            // Butonun Tag değerini al ve dersID olarak kullan
+            int dersID = Convert.ToInt32(clickedButton.Tag);
+
+            // Veritabanı sorgusu
+            string query = "SELECT `DersAdi`, `DersIcerigi` FROM dersicerikleri WHERE `dersID` = @dersID";
 
             try
             {
-                // MySQL bağlantısını aç
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
 
-                    // SQL sorgusu: dersicerigi tablosundaki ders adı ve ders içeriğini çek
-                    string query = "SELECT `ders adı`, `ders içeriği` FROM dersiceriği";
-
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
+                        command.Parameters.AddWithValue("@dersID", dersID);
+
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            if (reader.HasRows) // Eğer veri varsa
+                            if (reader.Read()) // Veri varsa
                             {
-                                string icerik = "";
-                                string baslik = "";
+                                // Ders adı ve içeriğini al
+                                string dersAdi = reader["DersAdi"].ToString();
+                                string dersIcerigi = reader["DersIcerigi"].ToString();
 
-                                while (reader.Read()) // Verileri sırayla oku
+                                // Yeni formu oluştur ve özellikleri ayarla
+                                Forms.DersIcerigi dersForm = new Forms.DersIcerigi
                                 {
-                                    // Ders adını ve ders içeriğini al
-                                    string dersAdi = reader["ders adı"].ToString();
-                                    string dersIcerigi = reader["ders içeriği"].ToString();
+                                    DersinAdi = dersAdi,
+                                    DersinIcerigi = dersIcerigi
+                                };
 
-                                    baslik += $"{dersAdi}";
-                                    icerik += $"{dersIcerigi}";
-                                }
-
-                                // Yeni formu aç ve notları gönder
-                                Forms.ders_SiberGuvenlikNedir ders = new Forms.ders_SiberGuvenlikNedir();
-                                ders.DersIcerigi = icerik;
-                                ders.DersAdi = baslik;
-                                OpenChildForm(ders);
+                                // Formu göster
+                               OpenChildForm(dersForm);
                             }
                             else
                             {
-                                // Eğer veri yoksa uyarı göster
-                                MessageBox.Show("Henüz ders kaydı bulunmamaktadır.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Bu ders için içerik bulunamadı.", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
                     }
@@ -89,10 +94,17 @@ namespace finalProject.Forms
             }
             catch (Exception ex)
             {
-                // Hata mesajı göster
-                MessageBox.Show($"Bir hata oluştu: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    
+
+        private void Dersler_siberGüvenligeGiris_Load(object sender, EventArgs e)
+        {
+            btnDers1.Tag = 1; 
+            btnDers2.Tag = 2; 
+            btnDers3.Tag = 3; 
+            btnDers4.Tag = 4; 
+
+        }
     }
 }

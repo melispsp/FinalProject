@@ -10,21 +10,22 @@ using System.Windows.Forms;
 
 namespace finalProject.Forms
 {
-    public partial class ders_SiberGuvenlikNedir : Form
+    public partial class DersIcerigi : Form
     {
-        public ders_SiberGuvenlikNedir()
+        public DersIcerigi()
         {
             InitializeComponent();
         }
 
-        public string DersIcerigi
+        public string DersinIcerigi
         {
             set
             {
                 tboxDersIcerigi.Text = value;
             }
         }
-        public string DersAdi
+
+        public string DersinAdi
         {
             set
             {
@@ -32,6 +33,9 @@ namespace finalProject.Forms
             }
         }
 
-
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
