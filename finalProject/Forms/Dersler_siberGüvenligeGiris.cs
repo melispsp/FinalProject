@@ -54,7 +54,7 @@ namespace finalProject.Forms
             int dersID = Convert.ToInt32(clickedButton.Tag);
 
             // Veritabanı sorgusu
-            string query = "SELECT `DersAdi`, `DersIcerigi` FROM dersicerikleri WHERE `dersID` = @dersID";
+            string query = "SELECT `DersAdi`, `DersIcerigi` FROM dersiceriği WHERE `dersID` = @dersID";
 
             try
             {
@@ -82,7 +82,10 @@ namespace finalProject.Forms
                                 };
 
                                 // Formu göster
-                               OpenChildForm(dersForm);
+                                OpenChildForm(dersForm);
+
+                          
+
                             }
                             else
                             {

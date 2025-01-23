@@ -25,6 +25,7 @@ namespace finalProject.Forms
 
         private void OpenChildForm(Form childForm)
         {
+
             //open only form
             if (currentChildForm != null)
             {
@@ -35,8 +36,8 @@ namespace finalProject.Forms
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            pnlBack.Controls.Add(childForm);
-            pnlBack.Tag = childForm;
+            pnlBackPanel.Controls.Add(childForm);
+            pnlBackPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
 
@@ -46,43 +47,49 @@ namespace finalProject.Forms
         private void btnDersIcerigi(object sender, EventArgs e)
         {
 
-            // Tıklanan butonu al
+
             Button clickedButton = sender as Button;
             if (clickedButton == null) return;
 
-            // Butonun Tag değerini al ve dersID olarak kullan
-            int dersID = Convert.ToInt32(clickedButton.Tag);
+            // Tıklanan butonun Tag değerini kontrol edin
+            if (clickedButton.Tag == null || !int.TryParse(clickedButton.Tag.ToString(), out int dersID))
+            {
+                MessageBox.Show("Geçersiz ders bilgisi.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // Veritabanı sorgusu
-            string query = "SELECT `DersAdi`, `DersIcerigi` FROM dersicerikleri WHERE `dersID` = @dersID";
+            string query = "SELECT `DersAdi`, `DersIcerigi` FROM dersiceriği WHERE `dersID` = @dersID";
 
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@dersID", dersID);
 
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            if (reader.Read()) // Veri varsa
+                            if (reader.Read())
                             {
-                                // Ders adı ve içeriğini al
+
+
                                 string dersAdi = reader["DersAdi"].ToString();
                                 string dersIcerigi = reader["DersIcerigi"].ToString();
 
-                                // Yeni formu oluştur ve özellikleri ayarla
+                                // Form oluştur ve veri ata
                                 Forms.DersIcerigi dersForm = new Forms.DersIcerigi
                                 {
+
                                     DersinAdi = dersAdi,
                                     DersinIcerigi = dersIcerigi
                                 };
 
-                                // Formu göster
                                 OpenChildForm(dersForm);
+                                // Yeni formu göster
+
                             }
                             else
                             {
@@ -98,6 +105,7 @@ namespace finalProject.Forms
             }
         }
 
+
         private void Dersler_AgBilgisi_Load(object sender, EventArgs e)
         {
             btnDers1.Tag = 5;
@@ -105,5 +113,6 @@ namespace finalProject.Forms
             btnDers3.Tag = 7;
             btnDers4.Tag = 8;
         }
+
     }
 }
