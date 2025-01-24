@@ -119,6 +119,7 @@
             btnDers4.TabIndex = 1;
             btnDers4.Text = "Derse Başla";
             btnDers4.UseVisualStyleBackColor = false;
+            btnDers4.Click += btnDersIcerigi_Click;
             // 
             // button8
             // 
@@ -193,6 +194,7 @@
             btnDers3.TabIndex = 1;
             btnDers3.Text = "Derse Başla";
             btnDers3.UseVisualStyleBackColor = false;
+            btnDers3.Click += btnDersIcerigi_Click;
             // 
             // button6
             // 
@@ -267,6 +269,7 @@
             btnDers2.TabIndex = 1;
             btnDers2.Text = "Derse Başla";
             btnDers2.UseVisualStyleBackColor = false;
+            btnDers2.Click += btnDersIcerigi_Click;
             // 
             // button2
             // 
@@ -341,6 +344,7 @@
             btnDers1.TabIndex = 1;
             btnDers1.Text = "Derse Başla";
             btnDers1.UseVisualStyleBackColor = false;
+            btnDers1.Click += btnDersIcerigi_Click;
             // 
             // button4
             // 

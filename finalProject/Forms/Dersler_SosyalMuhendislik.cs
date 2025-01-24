@@ -9,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
+
 namespace finalProject.Forms
 {
     public partial class Dersler_SosyalMuhendislik : Form
     {
-        private Form currentChildForm;
+        private Form dersForm;
         string connectionString = "Server=localhost;Database=projectdb;Uid=root;Pwd=;";
+        private Form currentChildForm;
 
         public Dersler_SosyalMuhendislik()
         {
@@ -23,34 +25,36 @@ namespace finalProject.Forms
 
         private void OpenChildForm(Form childForm)
         {
-            // Sadece bir form açık tut
+            //open only form
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
             currentChildForm = childForm;
-
-            // Yeni formu ana panelde göster
+            //End
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            pnlBack.Controls.Add(childForm);
-            pnlBack.Tag = childForm;
+            pnlBackPanel.Controls.Add(childForm);
+            pnlBackPanel.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+
         }
 
-        private void btnDersIcerigi_Click(object sender, EventArgs e)
+
+        private void btnDersIcerigi(object sender, EventArgs e)
         {
+
             // Tıklanan butonu al
             Button clickedButton = sender as Button;
             if (clickedButton == null) return;
 
-            // Butonun Tag değerini dersID olarak kullan
+            // Butonun Tag değerini al ve dersID olarak kullan
             int dersID = Convert.ToInt32(clickedButton.Tag);
 
             // Veritabanı sorgusu
-            string query = "SELECT `DersAdi`, `DersIcerigi` FROM dersicerikleri WHERE `dersID` = @dersID";
+            string query = "SELECT `DersAdi`, `DersIcerigi` FROM dersiceriği WHERE `dersID` = @dersID";
 
             try
             {
@@ -79,6 +83,8 @@ namespace finalProject.Forms
 
                                 // Formu göster
                                 OpenChildForm(dersForm);
+
+
                             }
                             else
                             {
@@ -94,19 +100,13 @@ namespace finalProject.Forms
             }
         }
 
-        private void Dersler_SosyalMuhendislik_Load(object sender, EventArgs e)
+        private void Dersler_siberGüvenligeGiris_Load(object sender, EventArgs e)
         {
-            // Butonların Tag değerlerini dersID ile eşle
-            btnDers1.Tag = 13; // Sosyal mühendislik ile ilgili dersID'ler
-            btnDers2.Tag = 14;
-            btnDers3.Tag = 15;
-            btnDers4.Tag = 16;
+            btnDers1.Tag = 1;
+            btnDers2.Tag = 2;
+            btnDers3.Tag = 3;
+            btnDers4.Tag = 4;
 
-            // Click event'lerini butonlara bağla
-            btnDers1.Click += btnDersIcerigi_Click;
-            btnDers2.Click += btnDersIcerigi_Click;
-            btnDers3.Click += btnDersIcerigi_Click;
-            btnDers4.Click += btnDersIcerigi_Click;
         }
     }
 }

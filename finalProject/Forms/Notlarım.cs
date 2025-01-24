@@ -124,7 +124,7 @@ namespace finalProject.Forms
                     connection.Open();
 
                     // SQL sorgusu: Tüm notları çek
-                    string query = "SELECT Başlık, İçerik, NotNo FROM Notlar";
+                    string query = "SELECT Başlık, İçerik, NotNo FROM notlar";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {

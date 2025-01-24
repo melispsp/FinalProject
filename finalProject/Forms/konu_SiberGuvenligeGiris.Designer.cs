@@ -31,19 +31,19 @@
             panel1 = new Panel();
             panel6 = new Panel();
             panel7 = new Panel();
-            ıconButton2 = new FontAwesome.Sharp.IconButton();
+            btnTest3 = new FontAwesome.Sharp.IconButton();
             label7 = new Label();
             label8 = new Label();
             label9 = new Label();
             panel4 = new Panel();
             panel5 = new Panel();
-            ıconButton1 = new FontAwesome.Sharp.IconButton();
+            btnTest2 = new FontAwesome.Sharp.IconButton();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
             panel3 = new Panel();
             pnlSosyalMühendislikTest1 = new Panel();
-            btnSosMühTest1 = new FontAwesome.Sharp.IconButton();
+            btnTest1 = new FontAwesome.Sharp.IconButton();
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
@@ -83,7 +83,7 @@
             // 
             panel7.BackColor = Color.FromArgb(45, 45, 70);
             panel7.BorderStyle = BorderStyle.FixedSingle;
-            panel7.Controls.Add(ıconButton2);
+            panel7.Controls.Add(btnTest3);
             panel7.Controls.Add(label7);
             panel7.Controls.Add(label8);
             panel7.Controls.Add(label9);
@@ -92,29 +92,29 @@
             panel7.Size = new Size(1076, 190);
             panel7.TabIndex = 0;
             // 
-            // ıconButton2
+            // btnTest3
             // 
-            ıconButton2.BackColor = Color.Lime;
-            ıconButton2.FlatAppearance.BorderColor = Color.LightGreen;
-            ıconButton2.FlatAppearance.BorderSize = 2;
-            ıconButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 200, 0);
-            ıconButton2.FlatStyle = FlatStyle.Flat;
-            ıconButton2.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            ıconButton2.ForeColor = Color.Black;
-            ıconButton2.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
-            ıconButton2.IconColor = Color.Black;
-            ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton2.IconSize = 35;
-            ıconButton2.ImageAlign = ContentAlignment.MiddleRight;
-            ıconButton2.Location = new Point(798, 65);
-            ıconButton2.Name = "ıconButton2";
-            ıconButton2.Padding = new Padding(10, 5, 20, 5);
-            ıconButton2.Size = new Size(203, 59);
-            ıconButton2.TabIndex = 4;
-            ıconButton2.Text = "Teste Başla";
-            ıconButton2.TextAlign = ContentAlignment.MiddleLeft;
-            ıconButton2.UseVisualStyleBackColor = false;
-            ıconButton2.Click += btnTestBasla_Click;
+            btnTest3.BackColor = Color.Lime;
+            btnTest3.FlatAppearance.BorderColor = Color.LightGreen;
+            btnTest3.FlatAppearance.BorderSize = 2;
+            btnTest3.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 200, 0);
+            btnTest3.FlatStyle = FlatStyle.Flat;
+            btnTest3.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnTest3.ForeColor = Color.Black;
+            btnTest3.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            btnTest3.IconColor = Color.Black;
+            btnTest3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnTest3.IconSize = 35;
+            btnTest3.ImageAlign = ContentAlignment.MiddleRight;
+            btnTest3.Location = new Point(798, 65);
+            btnTest3.Name = "btnTest3";
+            btnTest3.Padding = new Padding(10, 5, 20, 5);
+            btnTest3.Size = new Size(203, 59);
+            btnTest3.TabIndex = 4;
+            btnTest3.Text = "Teste Başla";
+            btnTest3.TextAlign = ContentAlignment.MiddleLeft;
+            btnTest3.UseVisualStyleBackColor = false;
+            btnTest3.Click += btnTestBasla_Click;
             // 
             // label7
             // 
@@ -135,9 +135,9 @@
             label8.ForeColor = Color.Silver;
             label8.Location = new Point(30, 57);
             label8.Name = "label8";
-            label8.Size = new Size(66, 23);
+            label8.Size = new Size(59, 23);
             label8.TabIndex = 1;
-            label8.Text = "10 Soru";
+            label8.Text = "2 Soru";
             // 
             // label9
             // 
@@ -147,9 +147,9 @@
             label9.ForeColor = Color.Gainsboro;
             label9.Location = new Point(30, 18);
             label9.Name = "label9";
-            label9.Size = new Size(256, 28);
+            label9.Size = new Size(272, 28);
             label9.TabIndex = 0;
-            label9.Text = "Sosyal Mühendislik Test 1";
+            label9.Text = "Siber Güvenliğe Giriş Test 3";
             // 
             // panel4
             // 
@@ -164,7 +164,7 @@
             // 
             panel5.BackColor = Color.FromArgb(45, 45, 70);
             panel5.BorderStyle = BorderStyle.FixedSingle;
-            panel5.Controls.Add(ıconButton1);
+            panel5.Controls.Add(btnTest2);
             panel5.Controls.Add(label4);
             panel5.Controls.Add(label5);
             panel5.Controls.Add(label6);
@@ -173,29 +173,29 @@
             panel5.Size = new Size(1076, 190);
             panel5.TabIndex = 0;
             // 
-            // ıconButton1
+            // btnTest2
             // 
-            ıconButton1.BackColor = Color.Lime;
-            ıconButton1.FlatAppearance.BorderColor = Color.LightGreen;
-            ıconButton1.FlatAppearance.BorderSize = 2;
-            ıconButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 200, 0);
-            ıconButton1.FlatStyle = FlatStyle.Flat;
-            ıconButton1.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            ıconButton1.ForeColor = Color.Black;
-            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
-            ıconButton1.IconColor = Color.Black;
-            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton1.IconSize = 35;
-            ıconButton1.ImageAlign = ContentAlignment.MiddleRight;
-            ıconButton1.Location = new Point(798, 65);
-            ıconButton1.Name = "ıconButton1";
-            ıconButton1.Padding = new Padding(10, 5, 20, 5);
-            ıconButton1.Size = new Size(203, 59);
-            ıconButton1.TabIndex = 4;
-            ıconButton1.Text = "Teste Başla";
-            ıconButton1.TextAlign = ContentAlignment.MiddleLeft;
-            ıconButton1.UseVisualStyleBackColor = false;
-            ıconButton1.Click += btnTestBasla_Click;
+            btnTest2.BackColor = Color.Lime;
+            btnTest2.FlatAppearance.BorderColor = Color.LightGreen;
+            btnTest2.FlatAppearance.BorderSize = 2;
+            btnTest2.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 200, 0);
+            btnTest2.FlatStyle = FlatStyle.Flat;
+            btnTest2.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnTest2.ForeColor = Color.Black;
+            btnTest2.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            btnTest2.IconColor = Color.Black;
+            btnTest2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnTest2.IconSize = 35;
+            btnTest2.ImageAlign = ContentAlignment.MiddleRight;
+            btnTest2.Location = new Point(798, 65);
+            btnTest2.Name = "btnTest2";
+            btnTest2.Padding = new Padding(10, 5, 20, 5);
+            btnTest2.Size = new Size(203, 59);
+            btnTest2.TabIndex = 4;
+            btnTest2.Text = "Teste Başla";
+            btnTest2.TextAlign = ContentAlignment.MiddleLeft;
+            btnTest2.UseVisualStyleBackColor = false;
+            btnTest2.Click += btnTestBasla_Click;
             // 
             // label4
             // 
@@ -216,9 +216,9 @@
             label5.ForeColor = Color.Silver;
             label5.Location = new Point(30, 57);
             label5.Name = "label5";
-            label5.Size = new Size(66, 23);
+            label5.Size = new Size(59, 23);
             label5.TabIndex = 1;
-            label5.Text = "10 Soru";
+            label5.Text = "2 Soru";
             // 
             // label6
             // 
@@ -228,9 +228,9 @@
             label6.ForeColor = Color.Gainsboro;
             label6.Location = new Point(30, 18);
             label6.Name = "label6";
-            label6.Size = new Size(256, 28);
+            label6.Size = new Size(272, 28);
             label6.TabIndex = 0;
-            label6.Text = "Sosyal Mühendislik Test 1";
+            label6.Text = "Siber Güvenliğe Giriş Test 2";
             // 
             // panel3
             // 
@@ -245,7 +245,7 @@
             // 
             pnlSosyalMühendislikTest1.BackColor = Color.FromArgb(45, 45, 70);
             pnlSosyalMühendislikTest1.BorderStyle = BorderStyle.FixedSingle;
-            pnlSosyalMühendislikTest1.Controls.Add(btnSosMühTest1);
+            pnlSosyalMühendislikTest1.Controls.Add(btnTest1);
             pnlSosyalMühendislikTest1.Controls.Add(label3);
             pnlSosyalMühendislikTest1.Controls.Add(label2);
             pnlSosyalMühendislikTest1.Controls.Add(label1);
@@ -254,29 +254,29 @@
             pnlSosyalMühendislikTest1.Size = new Size(1076, 190);
             pnlSosyalMühendislikTest1.TabIndex = 0;
             // 
-            // btnSosMühTest1
+            // btnTest1
             // 
-            btnSosMühTest1.BackColor = Color.Lime;
-            btnSosMühTest1.FlatAppearance.BorderColor = Color.LightGreen;
-            btnSosMühTest1.FlatAppearance.BorderSize = 2;
-            btnSosMühTest1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 200, 0);
-            btnSosMühTest1.FlatStyle = FlatStyle.Flat;
-            btnSosMühTest1.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
-            btnSosMühTest1.ForeColor = Color.Black;
-            btnSosMühTest1.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
-            btnSosMühTest1.IconColor = Color.Black;
-            btnSosMühTest1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnSosMühTest1.IconSize = 35;
-            btnSosMühTest1.ImageAlign = ContentAlignment.MiddleRight;
-            btnSosMühTest1.Location = new Point(798, 65);
-            btnSosMühTest1.Name = "btnSosMühTest1";
-            btnSosMühTest1.Padding = new Padding(10, 5, 20, 5);
-            btnSosMühTest1.Size = new Size(203, 59);
-            btnSosMühTest1.TabIndex = 4;
-            btnSosMühTest1.Text = "Teste Başla";
-            btnSosMühTest1.TextAlign = ContentAlignment.MiddleLeft;
-            btnSosMühTest1.UseVisualStyleBackColor = false;
-            btnSosMühTest1.Click += btnTestBasla_Click;
+            btnTest1.BackColor = Color.Lime;
+            btnTest1.FlatAppearance.BorderColor = Color.LightGreen;
+            btnTest1.FlatAppearance.BorderSize = 2;
+            btnTest1.FlatAppearance.MouseOverBackColor = Color.FromArgb(0, 200, 0);
+            btnTest1.FlatStyle = FlatStyle.Flat;
+            btnTest1.Font = new Font("Verdana", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 162);
+            btnTest1.ForeColor = Color.Black;
+            btnTest1.IconChar = FontAwesome.Sharp.IconChar.AngleRight;
+            btnTest1.IconColor = Color.Black;
+            btnTest1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnTest1.IconSize = 35;
+            btnTest1.ImageAlign = ContentAlignment.MiddleRight;
+            btnTest1.Location = new Point(798, 65);
+            btnTest1.Name = "btnTest1";
+            btnTest1.Padding = new Padding(10, 5, 20, 5);
+            btnTest1.Size = new Size(203, 59);
+            btnTest1.TabIndex = 4;
+            btnTest1.Text = "Teste Başla";
+            btnTest1.TextAlign = ContentAlignment.MiddleLeft;
+            btnTest1.UseVisualStyleBackColor = false;
+            btnTest1.Click += btnTestBasla_Click;
             // 
             // label3
             // 
@@ -297,9 +297,9 @@
             label2.ForeColor = Color.Silver;
             label2.Location = new Point(30, 57);
             label2.Name = "label2";
-            label2.Size = new Size(66, 23);
+            label2.Size = new Size(59, 23);
             label2.TabIndex = 1;
-            label2.Text = "10 Soru";
+            label2.Text = "2 Soru";
             // 
             // label1
             // 
@@ -309,9 +309,9 @@
             label1.ForeColor = Color.Gainsboro;
             label1.Location = new Point(30, 18);
             label1.Name = "label1";
-            label1.Size = new Size(256, 28);
+            label1.Size = new Size(272, 28);
             label1.TabIndex = 0;
-            label1.Text = "Sosyal Mühendislik Test 1";
+            label1.Text = "Siber Güvenliğe Giriş Test 1";
             // 
             // panel2
             // 
@@ -329,6 +329,7 @@
             Controls.Add(panel1);
             Name = "konu_SiberGuvenligeGiris";
             Text = "konu_SiberGuvenligeGiris";
+            Load += konu_SiberGuvenligeGiris_Load;
             panel1.ResumeLayout(false);
             panel6.ResumeLayout(false);
             panel7.ResumeLayout(false);
@@ -348,19 +349,19 @@
         private Panel panel2;
         private Panel panel6;
         private Panel panel7;
-        private FontAwesome.Sharp.IconButton ıconButton2;
+        private FontAwesome.Sharp.IconButton btnTest3;
         private Label label7;
         private Label label8;
         private Label label9;
         private Panel panel4;
         private Panel panel5;
-        private FontAwesome.Sharp.IconButton ıconButton1;
+        private FontAwesome.Sharp.IconButton btnTest2;
         private Label label4;
         private Label label5;
         private Label label6;
         private Panel panel3;
         private Panel pnlSosyalMühendislikTest1;
-        private FontAwesome.Sharp.IconButton btnSosMühTest1;
+        private FontAwesome.Sharp.IconButton btnTest1;
         private Label label3;
         private Label label2;
         private Label label1;

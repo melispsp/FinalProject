@@ -60,6 +60,7 @@
             label2 = new Label();
             label1 = new Label();
             panel2 = new Panel();
+            pnlBack = new Panel();
             panel1.SuspendLayout();
             panel10.SuspendLayout();
             panel11.SuspendLayout();
@@ -80,6 +81,7 @@
             panel1.Controls.Add(panel8);
             panel1.Controls.Add(panel3);
             panel1.Controls.Add(panel2);
+            panel1.Controls.Add(pnlBack);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -361,7 +363,16 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(1076, 190);
             panel5.TabIndex = 0;
-         
+            // 
+            // ıconButton1
+            // 
+            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            ıconButton1.IconColor = Color.Black;
+            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton1.Location = new Point(0, 0);
+            ıconButton1.Name = "ıconButton1";
+            ıconButton1.Size = new Size(75, 23);
+            ıconButton1.TabIndex = 0;
             // 
             // label4
             // 
@@ -477,6 +488,14 @@
             panel2.Size = new Size(1191, 54);
             panel2.TabIndex = 1;
             // 
+            // pnlBack
+            // 
+            pnlBack.Dock = DockStyle.Fill;
+            pnlBack.Location = new Point(0, 0);
+            pnlBack.Name = "pnlBack";
+            pnlBack.Size = new Size(1191, 913);
+            pnlBack.TabIndex = 5;
+            // 
             // konu_zararliYazilimlar
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -538,5 +557,6 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Panel pnlBack;
     }
 }
